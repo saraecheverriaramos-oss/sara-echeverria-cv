@@ -78,7 +78,8 @@ export interface PerfilProfesional {
   herramientas: string[];
   formacion: FormacionItem[];
   filosofia: {
-    parrafos: string[];
+    fraseGeneral: string;
+    ideas: string[];
     estado: "editorial_pendiente_aprobacion";
   };
   contacto: DatoContacto[];

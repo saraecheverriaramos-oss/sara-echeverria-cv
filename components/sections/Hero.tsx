@@ -1,7 +1,6 @@
 import Image from "next/image";
 import { ArrowRight, Download, MapPin } from "lucide-react";
 import { perfil } from "@/data/profile";
-import { Container } from "@/components/ui/Container";
 import { HeroMarquee } from "./HeroMarquee";
 
 const rolesClave = [
@@ -14,71 +13,75 @@ const rolesClave = [
 
 export function Hero() {
   return (
-    <section id="inicio" className="relative overflow-hidden border-b border-line pt-14 pb-16 sm:pt-20 sm:pb-24">
-      <div
-        aria-hidden
-        className="pointer-events-none absolute inset-x-0 top-0 -z-10 h-[36rem] bg-[radial-gradient(ellipse_60%_50%_at_50%_-10%,var(--color-accent-soft),transparent)] opacity-30"
-      />
+    <section id="inicio" className="relative overflow-hidden bg-noche text-noche-ink">
+      <div className="lg:grid lg:min-h-[92vh] lg:grid-cols-[1.05fr_0.95fr] lg:items-stretch">
+        <div className="relative order-1 h-[58vh] min-h-[24rem] lg:order-2 lg:h-auto">
+          <Image
+            src="/images/sara-echeverria-hero.jpg"
+            alt="Sara Echeverría Ramos, profesional de Dirección de Personas y Gestión Empresarial"
+            fill
+            priority
+            sizes="(min-width: 1024px) 48vw, 100vw"
+            className="object-cover"
+            style={{ objectPosition: "50% 18%" }}
+          />
+          <div
+            aria-hidden
+            className="absolute inset-0 bg-gradient-to-t from-noche via-noche/10 to-transparent lg:bg-gradient-to-r lg:from-noche/0 lg:via-transparent lg:to-transparent"
+          />
+        </div>
 
-      <Container className="grid min-w-0 gap-14 lg:grid-cols-[1.15fr_0.85fr] lg:items-center">
-        <div className="min-w-0">
-          <p className="mb-5 inline-flex items-center gap-2 rounded-full border border-line px-3 py-1 font-mono text-xs uppercase tracking-[0.2em] text-ink-muted">
+        <div className="relative order-2 flex flex-col justify-center gap-7 overflow-hidden px-6 py-14 sm:px-10 sm:py-16 lg:order-1 lg:px-16 lg:py-0">
+          <div aria-hidden className="aurora-blob aurora-gold -left-32 -top-32 h-[26rem] w-[26rem]" />
+          <div aria-hidden className="aurora-blob aurora-teal -bottom-40 left-1/3 h-[22rem] w-[22rem]" />
+
+          <p className="relative z-10 inline-flex w-fit items-center gap-2 rounded-full border border-noche-line bg-white/5 px-3 py-1 font-mono text-xs uppercase tracking-[0.2em] text-noche-ink-muted backdrop-blur">
             <MapPin size={12} aria-hidden className="text-accent" />
             {perfil.ubicacion}
           </p>
 
-          <h1 className="max-w-2xl font-serif text-4xl leading-[1.08] sm:text-5xl lg:text-[3.4rem]">
-            {perfil.titular}
-          </h1>
+          <div className="relative z-10">
+            <p className="font-serif text-lg text-noche-ink-muted">{perfil.nombre}</p>
+            <h1 className="mt-1 max-w-xl font-serif text-4xl leading-[1.08] sm:text-5xl lg:text-[3.2rem]">
+              <span className="gradient-text">{perfil.titular.split("|")[0].trim()}</span>
+            </h1>
+          </div>
 
-          <p className="mt-6 max-w-xl text-lg leading-relaxed text-ink-muted">{perfil.propuestaValorBreve}</p>
-          <p className="mt-3 max-w-xl text-sm text-ink-muted/80">{perfil.disponibilidad}</p>
+          <p className="relative z-10 line-clamp-3 max-w-lg text-lg leading-relaxed text-noche-ink-muted">
+            {perfil.propuestaValorBreve}
+          </p>
 
-          <div className="mt-9 flex flex-wrap items-center gap-4">
+          <div className="relative z-10 flex flex-wrap items-center gap-4">
             <a
               href="#trayectoria"
-              className="group inline-flex items-center gap-2 rounded-full bg-ink px-6 py-3 text-sm font-medium text-paper transition-transform hover:-translate-y-0.5"
+              className="group inline-flex items-center gap-2 rounded-full bg-gradient-to-r from-accent to-focus px-6 py-3 text-sm font-medium text-noche transition-transform hover:-translate-y-0.5"
             >
-              Explorar trayectoria
+              Ver trayectoria
               <ArrowRight size={16} aria-hidden className="transition-transform group-hover:translate-x-0.5" />
-            </a>
-            <a
-              href="#contacto"
-              className="inline-flex items-center gap-2 rounded-full border border-line px-6 py-3 text-sm font-medium text-ink transition-colors hover:border-accent hover:text-accent"
-            >
-              Contactar
             </a>
             {perfil.cv.archivoDisponible ? (
               <a
                 href={perfil.cv.ruta}
                 download={perfil.cv.nombreArchivo}
-                className="inline-flex items-center gap-2 text-sm font-medium text-ink-muted underline decoration-line decoration-1 underline-offset-4 transition-colors hover:text-accent"
+                className="glass-card inline-flex items-center gap-2 rounded-full px-6 py-3 text-sm font-medium text-noche-ink"
               >
                 <Download size={15} aria-hidden />
-                Descargar CV en PDF
+                Descargar CV
               </a>
             ) : null}
+            <a
+              href="#contacto"
+              className="inline-flex items-center gap-2 text-sm font-medium text-noche-ink-muted underline decoration-noche-line decoration-1 underline-offset-4 transition-colors hover:text-accent"
+            >
+              Contactar
+            </a>
           </div>
 
-          <div className="mt-12 border-t border-line pt-6">
-            <HeroMarquee items={rolesClave} />
+          <div className="relative z-10 border-t border-noche-line pt-6">
+            <HeroMarquee items={rolesClave} dark />
           </div>
         </div>
-
-        <div className="flex justify-center lg:justify-end">
-          <div className="relative aspect-[4/5] w-full max-w-sm overflow-hidden rounded-[2rem] border border-line bg-paper-muted">
-            <Image
-              src="/images/sara-echeverria-hero.jpg"
-              alt="Sara Echeverría Ramos, profesional de Dirección de Personas y Gestión Empresarial"
-              fill
-              priority
-              sizes="(min-width: 1024px) 384px, (min-width: 640px) 60vw, 90vw"
-              className="object-cover"
-              style={{ objectPosition: "50% 18%" }}
-            />
-          </div>
-        </div>
-      </Container>
+      </div>
     </section>
   );
 }

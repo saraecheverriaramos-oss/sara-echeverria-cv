@@ -277,11 +277,11 @@ export const perfil: PerfilProfesional = {
 
   filosofia: {
     estado: "editorial_pendiente_aprobacion",
-    parrafos: [
-      "Dirigir personas no es una función aislada de Recursos Humanos: es una responsabilidad de negocio, la misma que se ejerce al frente de un proyecto propio.",
-      "El liderazgo se demuestra en la gestión diaria — en las decisiones administrativas, financieras y comerciales que sostienen una organización — no en el discurso sobre el liderazgo.",
-      "La inteligencia artificial no sustituye el criterio: lo amplía. Se incorpora cuando resuelve un problema real de gestión, comunicación o productividad.",
-      "La prevención de riesgos laborales parte de la misma idea: una organización bien dirigida cuida de las personas que la sostienen, no solo de sus resultados.",
+    fraseGeneral: "Dirigir personas es una decisión de negocio, no solo una función de Recursos Humanos.",
+    ideas: [
+      "Las personas forman parte de la estrategia del negocio.",
+      "La gestión requiere criterio y ejecución.",
+      "La tecnología debe resolver problemas reales.",
     ],
   },
 

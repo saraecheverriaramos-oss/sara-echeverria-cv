@@ -1,4 +1,6 @@
-export function HeroMarquee({ items }: { items: string[] }) {
+import { cn } from "@/lib/utils";
+
+export function HeroMarquee({ items, dark = false }: { items: string[]; dark?: boolean }) {
   const track = [...items, ...items];
 
   return (
@@ -10,7 +12,10 @@ export function HeroMarquee({ items }: { items: string[] }) {
         {track.map((item, i) => (
           <span
             key={`${item}-${i}`}
-            className="whitespace-nowrap font-mono text-xs uppercase tracking-[0.2em] text-ink-muted"
+            className={cn(
+              "whitespace-nowrap font-mono text-xs uppercase tracking-[0.2em]",
+              dark ? "text-noche-ink-muted" : "text-ink-muted",
+            )}
           >
             {item}
             <span aria-hidden className="ml-10 text-accent">

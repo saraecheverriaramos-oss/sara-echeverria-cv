@@ -1,8 +1,8 @@
 import { Navbar } from "@/components/Navbar";
 import { Footer } from "@/components/Footer";
+import { ChapterDivider } from "@/components/ChapterDivider";
 import { Hero } from "@/components/sections/Hero";
 import { PerfilEjecutivo } from "@/components/sections/PerfilEjecutivo";
-import { PropuestaValor } from "@/components/sections/PropuestaValor";
 import { Trayectoria } from "@/components/sections/Trayectoria";
 import { Proyectos } from "@/components/sections/Proyectos";
 import { Competencias } from "@/components/sections/Competencias";
@@ -15,12 +15,16 @@ export default function Home() {
     <>
       <Navbar />
       <main>
+        {/* Bloque 1 — Perfil y trayectoria */}
         <Hero />
         <PerfilEjecutivo />
-        <PropuestaValor />
         <Trayectoria />
-        <Proyectos />
+
+        <ChapterDivider />
+
+        {/* Bloque 2 — Valor profesional, proyectos y contacto */}
         <Competencias />
+        <Proyectos />
         <Formacion />
         <Filosofia />
         <Contacto />
