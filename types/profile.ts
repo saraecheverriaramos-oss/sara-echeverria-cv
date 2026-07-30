@@ -67,10 +67,12 @@ export interface DatoContacto {
 export interface PerfilProfesional {
   nombre: string;
   titular: string;
+  tagline: string;
   propuestaValorBreve: string;
   ubicacion: string;
   disponibilidad: string;
   resumenEjecutivo: string;
+  resumenBreve: string;
   pilares: PilarValor[];
   experiencia: ExperienciaItem[];
   proyectos: ProyectoDestacado[];
@@ -86,8 +88,8 @@ export interface PerfilProfesional {
   idiomas: Idioma[];
   cv: {
     archivoDisponible: boolean;
-    ruta: string;
-    nombreArchivo: string;
+    visual: { ruta: string; nombreArchivo: string };
+    ats: { ruta: string; nombreArchivo: string };
   };
 }
 

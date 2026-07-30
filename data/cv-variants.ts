@@ -12,8 +12,8 @@ import type { CvVariant } from "@/types/profile";
 export const cvVariants: CvVariant[] = [
   {
     id: "general",
-    etiqueta: "General directivo",
-    nombreArchivo: "Sara-Echeverria-Ramos-CV.pdf",
+    etiqueta: "General directivo (ATS)",
+    nombreArchivo: "Sara-Echeverria-Ramos-CV-ATS.pdf",
     titular: "Dirección de Personas y Gestión Empresarial",
     resumen:
       "Sara Echeverría Ramos dirige negocios propios desde 2001. Como propietaria, empresaria autónoma y gerente, ha llevado la gestión integral de tres establecimientos comerciales — organización, compras, personal, atención al cliente y control económico — y, entre 2015 y 2020, la dirección societaria y financiera de Promociones AISA Cuatro S.L. como socia, administradora solidaria y gerente. Sobre esa base empresarial ha cursado la Diplomatura en Relaciones Laborales y el Máster en Dirección de Recursos Humanos y Gestión de Personas, y cursa el Máster Universitario en Prevención de Riesgos Laborales. En paralelo desarrolla páginas web y aplica de forma práctica la inteligencia artificial a la gestión, la comunicación y la productividad.",

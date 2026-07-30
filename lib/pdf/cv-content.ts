@@ -23,9 +23,11 @@ export function getCvContent(variantId: string = "general") {
   return {
     nombre: perfil.nombre,
     titular: variant.titular,
+    tagline: perfil.tagline,
     ubicacion: perfil.ubicacion,
     disponibilidad: perfil.disponibilidad,
     resumen: variant.resumen,
+    resumenBreve: perfil.resumenBreve,
     contacto,
     competencias,
     herramientas: perfil.herramientas,
@@ -34,6 +36,12 @@ export function getCvContent(variantId: string = "general") {
     proyectos: perfil.proyectos,
     idiomas: perfil.idiomas,
     nombreArchivo: variant.nombreArchivo,
+    hitos: [
+      { label: "+20 años", detalle: "dirigiendo negocios propios" },
+      { label: "3 establecimientos", detalle: "gestión integral en Bellotza" },
+      { label: "Experiencia societaria", detalle: "y financiera (Promociones AISA)" },
+      { label: "RR. HH. · PRL · IA", detalle: "formación aplicada a la gestión" },
+    ],
   };
 }
 

@@ -23,12 +23,12 @@ export default function CvPdfPage() {
         <div className="flex items-center gap-3">
           {perfil.cv.archivoDisponible ? (
             <a
-              href={perfil.cv.ruta}
-              download={perfil.cv.nombreArchivo}
+              href={perfil.cv.ats.ruta}
+              download={perfil.cv.ats.nombreArchivo}
               className="inline-flex items-center gap-2 rounded-full border border-line px-4 py-2 text-sm hover:border-accent hover:text-accent"
             >
               <Download size={15} aria-hidden />
-              Descargar PDF
+              Descargar PDF (ATS)
             </a>
           ) : null}
           <PrintButton />

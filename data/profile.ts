@@ -28,6 +28,9 @@ export const perfil: PerfilProfesional = {
 
   titular: "Dirección de Personas y Gestión Empresarial | Experiencia empresarial real, transformación digital e IA aplicada.",
 
+  tagline:
+    "Más de 20 años dirigiendo negocios propios, con formación en Recursos Humanos, Prevención de Riesgos Laborales e inteligencia artificial aplicada a la gestión.",
+
   propuestaValorBreve:
     "Más de dos décadas dirigiendo negocios propios — personas, finanzas, compras y clientes — combinadas con formación en Dirección de Recursos Humanos y Prevención de Riesgos Laborales, y aplicación práctica de inteligencia artificial a la gestión.",
 
@@ -36,6 +39,9 @@ export const perfil: PerfilProfesional = {
 
   resumenEjecutivo:
     "Sara Echeverría Ramos dirige negocios propios desde 2001. Como propietaria, empresaria autónoma y gerente, ha llevado la gestión integral de tres establecimientos comerciales — organización, compras, personal, atención al cliente y control económico — y, entre 2015 y 2020, la dirección societaria y financiera de Promociones AISA Cuatro S.L. como socia, administradora solidaria y gerente. Sobre esa base empresarial ha cursado la Diplomatura en Relaciones Laborales (UPNA) y el Máster en Dirección de Recursos Humanos y Gestión de Personas (ESIC Universidad), y cursa el Máster Universitario en Prevención de Riesgos Laborales. En paralelo desarrolla páginas web y aplica de forma práctica la inteligencia artificial a la gestión, la comunicación y la productividad. Su objetivo actual es incorporar esa experiencia, formación y capacidad de gestión a una organización.",
+
+  resumenBreve:
+    "Sara Echeverría Ramos dirige negocios propios desde 2001: gestión integral de tres establecimientos como propietaria y gerente, y dirección societaria y financiera de Promociones AISA Cuatro S.L. (2015–2020). Formación en Relaciones Laborales y en Dirección de Recursos Humanos y Gestión de Personas, con el Máster Universitario en Prevención de Riesgos Laborales en curso. Desarrolla páginas web y aplica de forma práctica la inteligencia artificial a la gestión, la comunicación y la productividad.",
 
   pilares: [
     {
@@ -311,7 +317,13 @@ export const perfil: PerfilProfesional = {
 
   cv: {
     archivoDisponible: true,
-    ruta: "/Sara-Echeverria-Ramos-CV.pdf",
-    nombreArchivo: "Sara-Echeverria-Ramos-CV.pdf",
+    visual: {
+      ruta: "/Sara-Echeverria-Ramos-CV-Visual.pdf",
+      nombreArchivo: "Sara-Echeverria-Ramos-CV-Visual.pdf",
+    },
+    ats: {
+      ruta: "/Sara-Echeverria-Ramos-CV-ATS.pdf",
+      nombreArchivo: "Sara-Echeverria-Ramos-CV-ATS.pdf",
+    },
   },
 };

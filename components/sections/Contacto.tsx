@@ -87,6 +87,16 @@ export function Contacto() {
             <div className={perfil.idiomas.length > 0 ? "mt-6" : ""}>
               <p className="text-sm font-medium text-noche-ink">Descargar CV</p>
               <div className="mt-3 flex flex-wrap gap-3">
+                {perfil.cv.archivoDisponible ? (
+                  <a
+                    href={perfil.cv.visual.ruta}
+                    download={perfil.cv.visual.nombreArchivo}
+                    className="inline-flex items-center gap-2 rounded-full bg-gradient-to-r from-accent to-focus px-4 py-2 text-xs font-medium text-noche"
+                  >
+                    <Download size={13} aria-hidden />
+                    CV visual (principal)
+                  </a>
+                ) : null}
                 {cvVariants.map((variant) => (
                   <a
                     key={variant.id}
@@ -99,6 +109,10 @@ export function Contacto() {
                   </a>
                 ))}
               </div>
+              <p className="mt-2 text-xs text-noche-ink-muted">
+                El CV visual es para enviar directamente a empresas y contactos. Las versiones ATS están pensadas
+                para portales de empleo.
+              </p>
             </div>
           </Reveal>
 

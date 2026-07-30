@@ -61,8 +61,8 @@ export function Hero() {
             </a>
             {perfil.cv.archivoDisponible ? (
               <a
-                href={perfil.cv.ruta}
-                download={perfil.cv.nombreArchivo}
+                href={perfil.cv.visual.ruta}
+                download={perfil.cv.visual.nombreArchivo}
                 className="glass-card inline-flex items-center gap-2 rounded-full px-6 py-3 text-sm font-medium text-noche-ink"
               >
                 <Download size={15} aria-hidden />
@@ -76,6 +76,16 @@ export function Hero() {
               Contactar
             </a>
           </div>
+
+          {perfil.cv.archivoDisponible ? (
+            <a
+              href={perfil.cv.ats.ruta}
+              download={perfil.cv.ats.nombreArchivo}
+              className="relative z-10 -mt-3 inline-flex w-fit items-center gap-1.5 text-xs text-noche-ink-muted underline decoration-dotted decoration-1 underline-offset-4 transition-colors hover:text-accent"
+            >
+              Descargar CV ATS (para portales de empleo)
+            </a>
+          ) : null}
 
           <div className="relative z-10 border-t border-noche-line pt-6">
             <HeroMarquee items={rolesClave} dark />
