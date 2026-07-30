@@ -1,0 +1,91 @@
+@import "tailwindcss";
+
+@custom-variant dark (&:where(.dark, .dark *));
+
+:root {
+  --paper: #faf8f4;
+  --paper-muted: #f1ede4;
+  --ink: #17181c;
+  --ink-muted: #4b4d56;
+  --line: #e3ddce;
+  --accent: #a8642f;
+  --accent-soft: #ddb98a;
+  --focus: #1c6b63;
+}
+
+.dark {
+  --paper: #14151a;
+  --paper-muted: #1c1e24;
+  --ink: #f3f1ea;
+  --ink-muted: #adb0bb;
+  --line: #2a2c34;
+  --accent: #e0a468;
+  --accent-soft: #6b4a28;
+  --focus: #6fd1c4;
+}
+
+@theme inline {
+  --color-paper: var(--paper);
+  --color-paper-muted: var(--paper-muted);
+  --color-ink: var(--ink);
+  --color-ink-muted: var(--ink-muted);
+  --color-line: var(--line);
+  --color-accent: var(--accent);
+  --color-accent-soft: var(--accent-soft);
+  --color-focus: var(--focus);
+  --font-serif: var(--font-fraunces);
+  --font-sans: var(--font-inter);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background: var(--color-paper);
+  color: var(--color-ink);
+  font-family: var(--font-sans), ui-sans-serif, system-ui, sans-serif;
+}
+
+::selection {
+  background: var(--color-accent-soft);
+  color: var(--color-ink);
+}
+
+:focus-visible {
+  outline: 2px solid var(--color-focus);
+  outline-offset: 3px;
+  border-radius: 2px;
+}
+
+@keyframes marquee {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(-50%);
+  }
+}
+
+@media print {
+  @page {
+    size: A4;
+    margin: 14mm;
+  }
+
+  nav,
+  .no-print {
+    display: none !important;
+  }
+}
