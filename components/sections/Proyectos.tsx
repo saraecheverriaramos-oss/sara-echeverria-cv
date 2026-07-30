@@ -1,15 +1,14 @@
+import { ExternalLink } from "lucide-react";
 import { perfil } from "@/data/profile";
 import { Section } from "@/components/ui/Section";
 import { Reveal } from "@/components/ui/Reveal";
-import { PendingTag } from "@/components/ui/PendingTag";
 
 export function Proyectos() {
   return (
     <Section
       id="proyectos"
       eyebrow="Proyectos destacados"
-      title="Casos de desarrollo digital y organizativo"
-      lead="Se documentan según la información disponible. Los apartados sin datos confirmados quedan señalados en lugar de rellenarse con supuestos."
+      title="Desarrollo digital y aplicación práctica de IA"
     >
       <div className="mt-14 grid gap-6 sm:grid-cols-2">
         {perfil.proyectos.map((proyecto, i) => (
@@ -28,13 +27,17 @@ export function Proyectos() {
                 </div>
               ) : null}
 
-              <p className="mt-5 border-t border-line pt-4 text-sm">
-                {proyecto.resultado ? (
-                  <span className="text-ink-muted">{proyecto.resultado}</span>
-                ) : (
-                  <PendingTag>Resultado confirmado — pendiente</PendingTag>
-                )}
-              </p>
+              {proyecto.enlace ? (
+                <a
+                  href={proyecto.enlace}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="mt-5 inline-flex w-fit items-center gap-1.5 border-t border-line pt-4 text-sm text-accent hover:underline"
+                >
+                  {proyecto.enlace.replace(/^https?:\/\//, "")}
+                  <ExternalLink size={13} aria-hidden />
+                </a>
+              ) : null}
             </article>
           </Reveal>
         ))}

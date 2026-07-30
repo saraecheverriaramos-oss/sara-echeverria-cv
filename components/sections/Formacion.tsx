@@ -1,7 +1,12 @@
 import { perfil } from "@/data/profile";
 import { Section } from "@/components/ui/Section";
 import { Reveal } from "@/components/ui/Reveal";
-import { PendingTag } from "@/components/ui/PendingTag";
+
+const etiquetaEstado: Record<string, string> = {
+  en_curso: "En curso",
+  matriculada: "Matriculada",
+  completada: "Completada",
+};
 
 export function Formacion() {
   return (
@@ -13,26 +18,18 @@ export function Formacion() {
               <div>
                 <h3 className="font-serif text-lg">{item.titulo}</h3>
                 <p className="mt-1 text-sm text-ink-muted">
-                  {item.institucion ?? "Institución pendiente de confirmar"}
-                  {item.calificacion ? ` · ${item.calificacion}` : null}
+                  {[item.institucion, item.periodo].filter(Boolean).join(" · ")}
                 </p>
                 {item.detalle ? <p className="mt-1 text-sm text-ink-muted">{item.detalle}</p> : null}
-                {item.pendiente.length > 0 ? (
-                  <div className="mt-3 flex flex-wrap gap-2">
-                    {item.pendiente.map((p) => (
-                      <PendingTag key={p}>{p}</PendingTag>
-                    ))}
-                  </div>
-                ) : null}
               </div>
               <span
                 className={
-                  item.estado === "en_curso"
-                    ? "shrink-0 rounded-full bg-accent-soft/60 px-3 py-1 text-xs font-medium uppercase tracking-wide text-ink"
-                    : "shrink-0 rounded-full border border-line px-3 py-1 text-xs font-medium uppercase tracking-wide text-ink-muted"
+                  item.estado === "completada"
+                    ? "shrink-0 rounded-full border border-line px-3 py-1 text-xs font-medium uppercase tracking-wide text-ink-muted"
+                    : "shrink-0 rounded-full bg-accent-soft/60 px-3 py-1 text-xs font-medium uppercase tracking-wide text-ink"
                 }
               >
-                {item.estado === "en_curso" ? "En curso" : "Completada"}
+                {etiquetaEstado[item.estado]}
               </span>
             </div>
           </Reveal>

@@ -1,24 +1,25 @@
-import { ExternalLink, Mail, MapPin, MessageCircle } from "lucide-react";
+import { Mail, MapPin, Phone } from "lucide-react";
 import { perfil } from "@/data/profile";
 import { Section } from "@/components/ui/Section";
 import { Reveal } from "@/components/ui/Reveal";
-import { PendingTag } from "@/components/ui/PendingTag";
+import { ContactForm } from "./ContactForm";
 
 const iconos = {
   email: Mail,
-  linkedin: ExternalLink,
-  whatsapp: MessageCircle,
+  telefono: Phone,
   ubicacion: MapPin,
 } as const;
 
 export function Contacto() {
+  const canales = perfil.contacto.filter((c) => c.disponible && c.valor);
+
   return (
     <Section id="contacto" eyebrow="Contacto" title="Hablemos del siguiente proyecto que dirigir">
       <div className="mt-14 grid gap-14 lg:grid-cols-2">
         <Reveal>
           <ul className="space-y-5">
-            {perfil.contacto.map((dato) => {
-              const Icon = iconos[dato.tipo];
+            {canales.map((dato) => {
+              const Icon = iconos[dato.tipo as keyof typeof iconos] ?? MapPin;
               return (
                 <li key={dato.tipo} className="flex items-center gap-4">
                   <span className="flex h-10 w-10 shrink-0 items-center justify-center rounded-full border border-line text-accent">
@@ -26,67 +27,28 @@ export function Contacto() {
                   </span>
                   <div>
                     <p className="text-sm text-ink-muted">{dato.etiqueta}</p>
-                    {dato.disponible && dato.valor ? (
-                      <p className="text-ink">{dato.valor}</p>
+                    {dato.href ? (
+                      <a href={dato.href} className="text-ink hover:text-accent">
+                        {dato.valor}
+                      </a>
                     ) : (
-                      <PendingTag>Pendiente de incorporar</PendingTag>
+                      <p className="text-ink">{dato.valor}</p>
                     )}
                   </div>
                 </li>
               );
             })}
           </ul>
+          {perfil.idiomas.length > 0 ? (
+            <p className="mt-10 border-t border-line pt-6 text-sm text-ink-muted">
+              <span className="font-medium text-ink">Idiomas: </span>
+              {perfil.idiomas.map((i) => `${i.nombre} (${i.nivel})`).join(" · ")}
+            </p>
+          ) : null}
         </Reveal>
 
         <Reveal delay={0.08}>
-          <form className="space-y-4" aria-describedby="form-pendiente">
-            <div>
-              <label htmlFor="nombre" className="text-sm text-ink-muted">
-                Nombre
-              </label>
-              <input
-                id="nombre"
-                name="nombre"
-                type="text"
-                autoComplete="name"
-                className="mt-1 w-full rounded-lg border border-line bg-paper px-4 py-2.5 text-ink outline-none focus-visible:border-accent"
-              />
-            </div>
-            <div>
-              <label htmlFor="email-contacto" className="text-sm text-ink-muted">
-                Correo electrónico
-              </label>
-              <input
-                id="email-contacto"
-                name="email"
-                type="email"
-                autoComplete="email"
-                className="mt-1 w-full rounded-lg border border-line bg-paper px-4 py-2.5 text-ink outline-none focus-visible:border-accent"
-              />
-            </div>
-            <div>
-              <label htmlFor="mensaje" className="text-sm text-ink-muted">
-                Mensaje
-              </label>
-              <textarea
-                id="mensaje"
-                name="mensaje"
-                rows={4}
-                className="mt-1 w-full rounded-lg border border-line bg-paper px-4 py-2.5 text-ink outline-none focus-visible:border-accent"
-              />
-            </div>
-            <button
-              type="submit"
-              disabled
-              aria-disabled
-              className="w-full cursor-not-allowed rounded-full bg-ink/40 px-6 py-3 text-sm font-medium text-paper"
-            >
-              Enviar mensaje
-            </button>
-            <p id="form-pendiente" className="text-xs text-ink-muted">
-              Formulario pendiente de activar: falta un correo de destino confirmado para su envío.
-            </p>
-          </form>
+          <ContactForm />
         </Reveal>
       </div>
     </Section>

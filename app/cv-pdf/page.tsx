@@ -11,7 +11,7 @@ export const metadata: Metadata = {
 };
 
 export default function CvPdfPage() {
-  const cv = getCvContent();
+  const cv = getCvContent("general");
 
   return (
     <div className="min-h-screen bg-paper-muted print:bg-white">
@@ -66,13 +66,12 @@ export default function CvPdfPage() {
           <h2 className="text-sm font-semibold uppercase tracking-wide text-[#555]">Experiencia profesional</h2>
           <div className="mt-2 space-y-5">
             {cv.experiencia.map((item) => (
-              <div key={item.empresa} className="break-inside-avoid">
+              <div key={item.id} className="break-inside-avoid">
                 <p className="text-[15px] font-semibold">
-                  {item.empresa}
-                  {item.puesto ? ` — ${item.puesto}` : ""}
+                  {item.empresa} — {item.puesto}
                 </p>
                 <p className="text-sm text-[#555]">
-                  {[item.periodo, item.sector].filter(Boolean).join(" · ")}
+                  {[item.periodo, item.ubicacion, item.sector].filter(Boolean).join(" · ")}
                 </p>
                 <p className="mt-1 text-[15px] leading-relaxed">{item.contexto}</p>
                 {item.responsabilidades.length > 0 ? (
@@ -91,25 +90,52 @@ export default function CvPdfPage() {
           <h2 className="text-sm font-semibold uppercase tracking-wide text-[#555]">Formación</h2>
           <div className="mt-2 space-y-2 text-[15px]">
             {cv.formacion.map((item) => (
-              <p key={item.titulo}>
+              <p key={item.id}>
                 <span className="font-semibold">{item.titulo}</span>
                 {item.institucion ? `, ${item.institucion}` : ""}
+                {item.periodo ? ` — ${item.periodo}` : ""}
                 {item.estado === "en_curso" ? " (en curso)" : ""}
-                {item.calificacion ? ` — ${item.calificacion}` : ""}
+                {item.estado === "matriculada" ? " (matriculada)" : ""}
               </p>
             ))}
           </div>
         </section>
 
         <section className="mt-8 break-inside-avoid">
-          <h2 className="text-sm font-semibold uppercase tracking-wide text-[#555]">Proyectos destacados</h2>
+          <h2 className="text-sm font-semibold uppercase tracking-wide text-[#555]">Proyectos digitales</h2>
           <div className="mt-2 space-y-2 text-[15px]">
             {cv.proyectos.map((p) => (
-              <p key={p.nombre}>
+              <p key={p.id}>
                 <span className="font-semibold">{p.nombre}:</span> {p.intervencion}
+                {p.enlace ? (
+                  <>
+                    {" — "}
+                    <a href={p.enlace} target="_blank" rel="noopener noreferrer" className="underline">
+                      {p.enlace.replace(/^https?:\/\//, "")}
+                    </a>
+                  </>
+                ) : null}
               </p>
             ))}
           </div>
+        </section>
+
+        <section className="mt-8 break-inside-avoid">
+          <h2 className="text-sm font-semibold uppercase tracking-wide text-[#555]">Información adicional</h2>
+          <p className="mt-2 text-[15px] leading-relaxed">
+            <span className="font-semibold">Herramientas: </span>
+            {cv.herramientas.join(", ")}
+          </p>
+          {cv.idiomas.length > 0 ? (
+            <p className="mt-1 text-[15px] leading-relaxed">
+              <span className="font-semibold">Idiomas: </span>
+              {cv.idiomas.map((i) => `${i.nombre} (${i.nivel})`).join(" · ")}
+            </p>
+          ) : null}
+          <p className="mt-1 text-[15px] leading-relaxed">
+            <span className="font-semibold">Disponibilidad: </span>
+            {cv.disponibilidad}
+          </p>
         </section>
       </main>
     </div>

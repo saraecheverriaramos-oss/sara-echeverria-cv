@@ -1,14 +1,10 @@
 import { perfil } from "@/data/profile";
 import { Section } from "@/components/ui/Section";
 import { Reveal } from "@/components/ui/Reveal";
-import { PendingTag } from "@/components/ui/PendingTag";
 
 export function Filosofia() {
   return (
     <Section id="filosofia" eyebrow="Filosofía de liderazgo" title="Cómo entiende la dirección de personas">
-      <div className="mt-8">
-        <PendingTag>Texto editorial — pendiente de aprobación de Sara Echeverría</PendingTag>
-      </div>
       <div className="mt-8 max-w-2xl space-y-6">
         {perfil.filosofia.parrafos.map((parrafo, i) => (
           <Reveal key={parrafo} delay={i * 0.05}>

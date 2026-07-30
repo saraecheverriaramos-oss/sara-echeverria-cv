@@ -1,218 +1,277 @@
 import type { PerfilProfesional } from "@/types/profile";
 
 /**
- * Fuente única de datos del CV de Sara Echeverría.
+ * Fuente única de datos del CV de Sara Echeverría Ramos.
  *
- * — Todo lo que aparece aquí sin marcar como pendiente procede literalmente
- *   de la información facilitada por Sara. No se han añadido fechas, cifras,
- *   cargos, resultados ni datos de contacto no confirmados.
- * — Los arrays `pendiente` documentan qué falta por validar en cada bloque.
- * — `filosofia` es contenido editorial propuesto, pendiente de aprobación.
+ * — Todo lo que aparece aquí procede literalmente de la información
+ *   confirmada por Sara. No se han añadido fechas, cifras, cargos,
+ *   resultados económicos ni calificaciones académicas no facilitadas.
+ * — Ningún componente público (web o PDF) debe mostrar avisos de tipo
+ *   "Pendiente de validar": lo no confirmado se omite (campo ausente o
+ *   `null`), nunca se rellena ni se señala visualmente al visitante.
+ * — `filosofia.estado` es una marca interna (contenido editorial, pendiente
+ *   de aprobación de Sara) y no se renderiza en la web.
  *
- * Edita este archivo para actualizar la web y el PDF a la vez: ambos
- * consumen esta misma fuente.
+ * Pendiente de confirmar (seguimiento interno, no público):
+ * - LinkedIn (se oculta hasta disponer de la URL exacta).
+ * - Fotografía profesional real (placeholder preparado en el hero).
+ * - Institución y fechas exactas de la habilitación docente en FP.
+ * - Fechas exactas de la Diplomatura en Relaciones Laborales y del Técnico
+ *   Superior en Administración y Finanzas.
+ * - Enlaces reales de artmotorgroup.es / atmsergesgroup.es: confirmar que
+ *   siguen siendo correctos antes de cada despliegue.
+ *
+ * Edita este archivo para actualizar la web y todos los PDF a la vez.
  */
 export const perfil: PerfilProfesional = {
-  nombre: "Sara Echeverría",
+  nombre: "Sara Echeverría Ramos",
 
-  titular: "Dirección de personas con visión empresarial y capacidad real de transformación.",
+  titular: "Dirección de Personas y Gestión Empresarial | Experiencia empresarial real, transformación digital e IA aplicada.",
 
   propuestaValorBreve:
-    "Formación específica en Recursos Humanos y Prevención de Riesgos Laborales, sobre una trayectoria real dirigiendo negocios, equipos y proyectos digitales — incluida la aplicación práctica de inteligencia artificial a la gestión empresarial.",
+    "Más de dos décadas dirigiendo negocios propios — personas, finanzas, compras y clientes — combinadas con formación en Dirección de Recursos Humanos y Prevención de Riesgos Laborales, y aplicación práctica de inteligencia artificial a la gestión.",
 
-  ubicacion: "País Vasco y Navarra",
+  ubicacion: "Oñati · Pamplona",
+  disponibilidad: "Disponibilidad para proyectos en Euskadi, Navarra y otras ubicaciones según la posición",
 
   resumenEjecutivo:
-    "Trayectoria construida desde la gestión real de negocios: como empresaria, autónoma y gerente ha asumido de forma directa la dirección administrativa, financiera, comercial y de personas de distintos proyectos, en sectores tan diversos como el comercio, la floristería, el interiorismo y la promoción inmobiliaria. Sobre esa base empresarial suma una formación específica en Dirección de Recursos Humanos (Máster ESIC, Trabajo Fin de Máster calificado con 9,5) y cursa actualmente el Máster Universitario en Prevención de Riesgos Laborales en la Universidad Pública de Navarra, junto con la habilitación docente para Formación Profesional. En sus proyectos más recientes — ART Motor Group y ATM Serges Group — ha participado en el desarrollo digital, web y organizativo, aplicando de forma práctica herramientas de inteligencia artificial a la gestión, la comunicación y la productividad.",
+    "Sara Echeverría Ramos dirige negocios propios desde 2001. Como propietaria, empresaria autónoma y gerente, ha llevado la gestión integral de tres establecimientos comerciales — organización, compras, personal, atención al cliente y control económico — y, entre 2015 y 2020, la dirección societaria y financiera de Promociones AISA Cuatro S.L. como socia, administradora solidaria y gerente. Sobre esa base empresarial ha cursado la Diplomatura en Relaciones Laborales (UPNA) y el Máster en Dirección de Recursos Humanos y Gestión de Personas (ESIC Universidad), y cursa el Máster Universitario en Prevención de Riesgos Laborales. En paralelo desarrolla páginas web y aplica de forma práctica la inteligencia artificial a la gestión, la comunicación y la productividad. Su objetivo actual es incorporar esa experiencia, formación y capacidad de gestión a una organización.",
 
   pilares: [
     {
       titulo: "Personas y organización",
       descripcion:
-        "Formación específica en Dirección de Recursos Humanos (Máster ESIC, TFM 9,5) aplicada sobre experiencia real dirigiendo personas dentro de la gestión directa de negocios.",
+        "Formación en Dirección de Recursos Humanos y Gestión de Personas (ESIC Universidad) aplicada sobre experiencia real dirigiendo personas dentro de la gestión directa de negocios.",
     },
     {
       titulo: "Dirección y gestión empresarial",
       descripcion:
-        "Trayectoria como empresaria, autónoma y gerente, con responsabilidad directa sobre la gestión administrativa, financiera y comercial de distintos proyectos.",
+        "Más de dos décadas como propietaria, empresaria autónoma y gerente, con responsabilidad directa sobre la gestión administrativa, financiera y comercial de negocios propios.",
     },
     {
-      titulo: "Estrategia y ejecución",
+      titulo: "Visión societaria y financiera",
       descripcion:
-        "Capacidad demostrada de dirigir un proyecto de principio a fin: de la puesta en marcha a la gestión del día a día, en sectores tan distintos como el comercio, la floristería, el interiorismo y la promoción inmobiliaria.",
+        "Socia, administradora solidaria y gerente de Promociones AISA Cuatro S.L., con responsabilidad sobre la gestión económica, contractual y de proveedores del proyecto.",
     },
     {
       titulo: "Transformación digital e IA",
       descripcion:
-        "Participación en el desarrollo digital, web y organizativo de ART Motor Group y ATM Serges Group, con aplicación práctica de inteligencia artificial a procesos de gestión y comunicación.",
+        "Desarrollo de páginas web y aplicación práctica de inteligencia artificial en proyectos como ART Motor Group y ATM Serges Group.",
     },
     {
       titulo: "Prevención, formación y desarrollo",
       descripcion:
-        "Máster Universitario en Prevención de Riesgos Laborales en curso (UPNA) y formación en curso para la habilitación docente en Formación Profesional.",
+        "Máster Universitario en Prevención de Riesgos Laborales y habilitación docente en Formación Profesional, ambos en curso.",
     },
   ],
 
   experiencia: [
     {
-      id: "atm-serges-group",
-      empresa: "ATM Serges Group",
+      id: "consultoria-independiente",
+      empresa: "Consultoría independiente — desarrollo digital e IA aplicada",
+      ubicacion: "Oñati / Pamplona",
       sector: null,
-      puesto: null,
-      periodo: "Reciente",
-      contexto: "Participación reciente en el desarrollo digital, web y organizativo de ATM Serges Group.",
-      responsabilidades: ["Desarrollo y gestión de la presencia web.", "Mejora organizativa del proyecto."],
-      competencias: ["Transformación digital", "Creación de páginas web", "Inteligencia artificial aplicada"],
-      pendiente: ["Cargo formal", "Fechas exactas", "Responsabilidades detalladas", "Resultados acreditados"],
-    },
-    {
-      id: "art-motor-group",
-      empresa: "ART Motor Group",
-      sector: null,
-      puesto: null,
-      periodo: "Reciente",
-      contexto: "Participación reciente en el desarrollo digital, web y organizativo de ART Motor Group.",
-      responsabilidades: ["Desarrollo y gestión de la presencia web.", "Mejora organizativa del proyecto."],
-      competencias: ["Transformación digital", "Creación de páginas web", "Inteligencia artificial aplicada"],
-      pendiente: ["Cargo formal", "Fechas exactas", "Responsabilidades detalladas", "Resultados acreditados"],
-    },
-    {
-      id: "promociones-aisa-cuatro",
-      empresa: "Promociones AISA Cuatro S.L.",
-      sector: "Promoción inmobiliaria",
-      puesto: null,
-      periodo: null,
-      contexto: "Parte de la trayectoria empresarial y de gestión de Sara Echeverría.",
-      responsabilidades: [],
-      competencias: ["Gestión empresarial", "Dirección administrativa"],
-      pendiente: ["Cargo", "Periodo", "Responsabilidades detalladas", "Proyectos y resultados"],
+      puesto: "Profesional independiente",
+      periodo: "2024 — actualidad",
+      contexto:
+        "Etapa activa de especialización profesional: formación de posgrado, desarrollo de páginas web y aplicación práctica de inteligencia artificial a proyectos empresariales.",
+      responsabilidades: [
+        "Creación y gestión de páginas web para proyectos empresariales.",
+        "Aplicación de inteligencia artificial a contenidos, comunicación, gestión y productividad.",
+        "Desarrollo y organización de activos digitales.",
+        "Formación de posgrado en Dirección de Recursos Humanos, Prevención de Riesgos Laborales y habilitación docente.",
+      ],
+      competencias: ["Transformación digital", "Inteligencia artificial aplicada", "Formación continua"],
     },
     {
       id: "bellotza",
       empresa: "Bellotza",
-      sector: null,
-      puesto: null,
-      periodo: null,
-      contexto: "Parte de la trayectoria empresarial y de gestión de Sara Echeverría.",
-      responsabilidades: [],
-      competencias: ["Gestión empresarial", "Dirección comercial"],
-      pendiente: ["Cargo", "Periodo", "Sector", "Responsabilidades detalladas", "Proyectos y resultados"],
+      ubicacion: "Oñati, Gipuzkoa",
+      sector: "Comercio minorista — floristería, regalo, moda, decoración e interiorismo",
+      puesto: "Propietaria, empresaria autónoma y gerente",
+      periodo: "2001 — 2023",
+      contexto: "Creación, puesta en marcha y dirección integral de tres establecimientos comerciales.",
+      responsabilidades: [
+        "Dirección comercial, económica y administrativa de los tres establecimientos.",
+        "Compras, negociación y coordinación con proveedores.",
+        "Selección, coordinación y organización del trabajo de personas.",
+        "Atención y fidelización de clientes, escaparatismo e interiorismo comercial.",
+        "Coordinación con asesorías laborales, fiscales y contables.",
+      ],
+      competencias: ["Dirección y gestión empresarial", "Gestión comercial", "Dirección de personas"],
+    },
+    {
+      id: "promociones-aisa-cuatro",
+      empresa: "Promociones AISA Cuatro S.L.",
+      ubicacion: null,
+      sector: "Promoción y gestión inmobiliaria",
+      puesto: "Socia al 50 %, administradora solidaria, gerente y responsable financiera",
+      periodo: "2015 — 2020",
+      contexto:
+        "Dirección societaria, financiera y administrativa del proyecto, con participación directa en la toma de decisiones.",
+      responsabilidades: [
+        "Gestión financiera: control de ingresos, gastos, presupuestos y facturación.",
+        "Coordinación de operaciones, proveedores y profesionales externos.",
+        "Gestión documental, contractual y societaria.",
+        "Coordinación con asesorías y seguimiento de proyectos.",
+      ],
+      competencias: ["Dirección societaria", "Gestión financiera", "Dirección administrativa"],
     },
   ],
 
   proyectos: [
     {
-      id: "atm-serges-group",
-      nombre: "ATM Serges Group — desarrollo digital",
-      necesidad: null,
-      intervencion: "Desarrollo digital, web y organizativo del proyecto.",
-      herramientas: ["Creación y gestión de páginas web", "Herramientas digitales"],
+      id: "art-motor-group",
+      nombre: "ART Motor Group",
+      periodo: "Reciente",
+      intervencion:
+        "Desarrollo y gestión de la página web, organización de contenidos digitales y del inventario de vehículos, y apoyo en la organización comercial del proyecto.",
+      herramientas: ["Desarrollo web", "Gestión de contenidos digitales", "Inteligencia artificial generativa"],
       resultado: null,
-      pendiente: ["Necesidad o problema de partida", "Resultado confirmado", "Enlace público"],
+      enlace: "https://www.artmotorgroup.es",
     },
     {
-      id: "art-motor-group",
-      nombre: "ART Motor Group — desarrollo digital",
-      necesidad: null,
-      intervencion: "Desarrollo digital, web y organizativo del proyecto.",
-      herramientas: ["Creación y gestión de páginas web", "Herramientas digitales"],
+      id: "atm-serges-group",
+      nombre: "ATM Serges Group",
+      periodo: "Reciente",
+      intervencion:
+        "Desarrollo y gestión de la página web corporativa, organización de contenidos comerciales y apoyo en la comunicación de servicios de cajeros automáticos y terminales de pago.",
+      herramientas: ["Desarrollo web", "Comunicación corporativa", "Inteligencia artificial generativa"],
       resultado: null,
-      pendiente: ["Necesidad o problema de partida", "Resultado confirmado", "Enlace público"],
+      enlace: "https://www.atmsergesgroup.es",
     },
     {
       id: "activos-digitales",
       nombre: "Creación y gestión de páginas web y activos digitales",
-      necesidad: null,
-      intervencion: "Creación y gestión de páginas web y otros activos digitales en distintos proyectos.",
-      herramientas: ["Desarrollo web", "Gestión de contenidos digitales"],
+      periodo: null,
+      intervencion: "Creación y gestión de páginas web y otros activos digitales para distintos proyectos empresariales.",
+      herramientas: ["GitHub", "Hostinger", "Vercel"],
       resultado: null,
-      pendiente: ["Proyectos concretos", "Enlaces", "Resultados confirmados"],
     },
     {
       id: "ia-aplicada",
       nombre: "Aplicación práctica de inteligencia artificial",
-      necesidad: null,
-      intervencion:
-        "Aplicación práctica de inteligencia artificial a procesos empresariales, comunicación y productividad.",
-      herramientas: ["Herramientas de inteligencia artificial generativa"],
+      periodo: null,
+      intervencion: "Aplicación práctica de inteligencia artificial a la gestión, la comunicación, los contenidos y la productividad.",
+      herramientas: ["Inteligencia artificial generativa", "Automatización de tareas"],
       resultado: null,
-      pendiente: ["Herramientas concretas", "Casos de uso documentados", "Resultados medibles"],
     },
   ],
 
   competencias: [
     {
-      area: "Dirección y estrategia",
-      items: ["Dirección de equipos", "Gestión empresarial", "Organización", "Negociación", "Toma de decisiones"],
-    },
-    {
-      area: "Recursos Humanos",
+      area: "Dirección y gestión",
       items: [
-        "Estrategia de personas",
-        "Selección",
-        "Desarrollo",
-        "Formación",
-        "Relaciones laborales",
-        "Cultura y organización",
-      ],
-    },
-    {
-      area: "Gestión",
-      items: [
+        "Dirección y gestión empresarial",
+        "Organización",
+        "Planificación",
+        "Toma de decisiones",
+        "Gestión económica y financiera",
         "Dirección administrativa",
-        "Gestión financiera",
-        "Gestión comercial",
-        "Coordinación de proveedores y proyectos",
+        "Coordinación operativa",
+        "Negociación",
+        "Gestión de proveedores",
+        "Resolución de incidencias",
       ],
     },
     {
-      area: "Innovación",
+      area: "Recursos Humanos y personas",
       items: [
-        "Inteligencia artificial aplicada",
-        "Creación de páginas web",
-        "Herramientas digitales",
-        "Automatización y productividad",
+        "Dirección y coordinación de personas",
+        "Selección",
+        "Entrevistas",
+        "Organización del trabajo",
+        "Formación y desarrollo",
+        "Relaciones laborales",
+        "Comunicación interna",
+        "Cultura organizativa",
+        "Detección de necesidades",
+        "Coordinación con asesorías laborales",
       ],
     },
+    {
+      area: "Transformación digital",
+      items: [
+        "Desarrollo de páginas web",
+        "Organización de contenidos digitales",
+        "Inteligencia artificial aplicada",
+        "Herramientas digitales",
+        "Automatización",
+        "Comunicación digital",
+        "Productividad",
+        "Desarrollo de activos corporativos",
+      ],
+    },
+    {
+      area: "Visión empresarial",
+      items: [
+        "Creación y puesta en marcha de negocios",
+        "Gestión integral",
+        "Orientación a cliente",
+        "Visión comercial",
+        "Control económico",
+        "Capacidad de ejecución",
+        "Adaptación a distintos sectores",
+      ],
+    },
+  ],
+
+  herramientas: [
+    "Microsoft Excel",
+    "Microsoft Word",
+    "Google Workspace",
+    "Canva",
+    "GitHub",
+    "Hostinger",
+    "Vercel",
+    "Herramientas de inteligencia artificial generativa",
   ],
 
   formacion: [
     {
       id: "relaciones-laborales",
-      titulo: "Grado en Relaciones Laborales",
-      institucion: null,
+      titulo: "Diplomatura en Relaciones Laborales",
+      institucion: "Universidad Pública de Navarra (UPNA)",
+      periodo: null,
       estado: "completada",
-      pendiente: ["Institución", "Fechas"],
+    },
+    {
+      id: "tecnico-superior-af",
+      titulo: "Técnico Superior en Administración y Finanzas",
+      institucion: "Colegio Técnico Carlos III, Pamplona",
+      periodo: null,
+      estado: "completada",
     },
     {
       id: "master-rrhh-esic",
-      titulo: "Máster en Dirección de Recursos Humanos",
-      institucion: "ESIC",
+      titulo: "Máster en Dirección de Recursos Humanos y Gestión de Personas",
+      institucion: "ESIC Universidad — Campus de Pamplona",
+      periodo: "2025–2026",
       estado: "completada",
-      calificacion: "Trabajo Fin de Máster calificado con 9,5",
-      pendiente: ["Fechas exactas"],
     },
     {
       id: "master-prl-upna",
       titulo: "Máster Universitario en Prevención de Riesgos Laborales",
       institucion: "Universidad Pública de Navarra (UPNA)",
-      estado: "en_curso",
-      pendiente: ["Fecha prevista de finalización"],
+      periodo: "2026–2027",
+      estado: "matriculada",
+      detalle:
+        "Especialidades del programa: Seguridad en el Trabajo, Higiene Industrial y Ergonomía y Psicosociología Aplicada.",
     },
     {
       id: "habilitacion-docente-fp",
-      titulo: "Habilitación docente en Formación Profesional",
+      titulo: "Habilitación para la Docencia en Grados A, B y C del Sistema de Formación Profesional",
       institucion: null,
+      periodo: null,
       estado: "en_curso",
-      pendiente: ["Institución", "Fecha prevista de finalización"],
     },
     {
       id: "ia-herramientas-digitales",
-      titulo: "Formación en inteligencia artificial y herramientas digitales",
+      titulo: "Formación continua en inteligencia artificial y herramientas digitales",
       institucion: null,
+      periodo: null,
       estado: "en_curso",
-      detalle: "Formación continua con aplicación práctica en proyectos reales (ART Motor Group, ATM Serges Group).",
-      pendiente: ["Certificaciones concretas"],
+      detalle: "Aplicación práctica en creación de páginas web, automatización, organización, comunicación y productividad.",
     },
   ],
 
@@ -221,23 +280,38 @@ export const perfil: PerfilProfesional = {
     parrafos: [
       "Dirigir personas no es una función aislada de Recursos Humanos: es una responsabilidad de negocio, la misma que se ejerce al frente de un proyecto propio.",
       "El liderazgo se demuestra en la gestión diaria — en las decisiones administrativas, financieras y comerciales que sostienen una organización — no en el discurso sobre el liderazgo.",
-      "La innovación, incluida la inteligencia artificial, no sustituye el criterio: lo amplía. Se incorpora cuando resuelve un problema real de gestión, comunicación o productividad.",
+      "La inteligencia artificial no sustituye el criterio: lo amplía. Se incorpora cuando resuelve un problema real de gestión, comunicación o productividad.",
       "La prevención de riesgos laborales parte de la misma idea: una organización bien dirigida cuida de las personas que la sostienen, no solo de sus resultados.",
     ],
   },
 
   contacto: [
-    { tipo: "ubicacion", valor: "País Vasco y Navarra", etiqueta: "Ubicación profesional", disponible: true },
-    { tipo: "email", valor: null, etiqueta: "Correo electrónico", disponible: false },
+    { tipo: "ubicacion", valor: "Oñati · Pamplona", etiqueta: "Ubicación profesional", disponible: true },
+    {
+      tipo: "email",
+      valor: "saraecheverriaramos@gmail.com",
+      etiqueta: "Correo electrónico",
+      disponible: true,
+      href: "mailto:saraecheverriaramos@gmail.com",
+    },
+    {
+      tipo: "telefono",
+      valor: "610 733 488",
+      etiqueta: "Teléfono",
+      disponible: true,
+      href: "tel:+34610733488",
+    },
     { tipo: "linkedin", valor: null, etiqueta: "LinkedIn", disponible: false },
-    { tipo: "whatsapp", valor: null, etiqueta: "WhatsApp profesional", disponible: false },
   ],
 
-  idiomas: [],
+  idiomas: [
+    { nombre: "Inglés", nivel: "Conocimientos básicos, sin acreditación oficial" },
+    { nombre: "Euskera", nivel: "Conocimientos básicos, sin acreditación oficial" },
+  ],
 
   cv: {
     archivoDisponible: true,
-    ruta: "/Sara-Echeverria-CV.pdf",
-    nombreArchivo: "Sara-Echeverria-CV.pdf",
+    ruta: "/Sara-Echeverria-Ramos-CV.pdf",
+    nombreArchivo: "Sara-Echeverria-Ramos-CV.pdf",
   },
 };

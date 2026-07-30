@@ -1,8 +1,14 @@
-import { Document, Page, StyleSheet, Text, View } from "@react-pdf/renderer";
+import { Document, Font, Link, Page, StyleSheet, Text, View } from "@react-pdf/renderer";
 import type { CvContent } from "./cv-content";
 
+// Desactiva la separación silábica automática: por defecto react-pdf inserta
+// guiones reales de corte de línea (p. ej. "atmserges-group.es"), lo que
+// corrompe el texto seleccionable y los enlaces de cara a sistemas ATS.
+Font.registerHyphenationCallback((word) => [word]);
+
 // Documento PDF de una sola columna, sin tablas ni iconos, pensado para
-// sistemas ATS: texto plano seleccionable, orden de lectura lineal.
+// sistemas ATS: texto plano seleccionable, orden de lectura lineal, sin
+// fotografía. Enlaces reales cuando existen (proyectos).
 const styles = StyleSheet.create({
   page: {
     paddingTop: 34,
@@ -62,6 +68,10 @@ const styles = StyleSheet.create({
     fontSize: 10.5,
     marginBottom: 3,
   },
+  link: {
+    color: "#111111",
+    textDecoration: "underline",
+  },
 });
 
 export function CvDocument({ cv }: { cv: CvContent }) {
@@ -87,14 +97,11 @@ export function CvDocument({ cv }: { cv: CvContent }) {
 
         <Text style={styles.sectionTitle}>Experiencia profesional</Text>
         {cv.experiencia.map((item) => (
-          <View key={item.empresa} style={styles.itemBlock} wrap={false}>
+          <View key={item.id} style={styles.itemBlock} wrap={false}>
             <Text style={styles.itemTitle}>
-              {item.empresa}
-              {item.puesto ? ` — ${item.puesto}` : ""}
+              {item.empresa} — {item.puesto}
             </Text>
-            {item.periodo || item.sector ? (
-              <Text style={styles.itemMeta}>{[item.periodo, item.sector].filter(Boolean).join(" · ")}</Text>
-            ) : null}
+            <Text style={styles.itemMeta}>{[item.periodo, item.ubicacion, item.sector].filter(Boolean).join(" · ")}</Text>
             <Text style={styles.paragraph}>{item.contexto}</Text>
             {item.responsabilidades.map((r) => (
               <Text key={r} style={styles.bullet}>
@@ -106,21 +113,46 @@ export function CvDocument({ cv }: { cv: CvContent }) {
 
         <Text style={styles.sectionTitle}>Formación</Text>
         {cv.formacion.map((item) => (
-          <Text key={item.titulo} style={styles.competenciaLine}>
+          <Text key={item.id} style={styles.competenciaLine}>
             <Text style={{ fontFamily: "Helvetica-Bold" }}>{item.titulo}</Text>
             {item.institucion ? `, ${item.institucion}` : ""}
+            {item.periodo ? ` — ${item.periodo}` : ""}
             {item.estado === "en_curso" ? " (en curso)" : ""}
-            {item.calificacion ? ` — ${item.calificacion}` : ""}
+            {item.estado === "matriculada" ? " (matriculada)" : ""}
           </Text>
         ))}
 
-        <Text style={styles.sectionTitle}>Proyectos destacados</Text>
+        <Text style={styles.sectionTitle}>Proyectos digitales</Text>
         {cv.proyectos.map((p) => (
-          <Text key={p.nombre} style={styles.competenciaLine}>
+          <Text key={p.id} style={styles.competenciaLine}>
             <Text style={{ fontFamily: "Helvetica-Bold" }}>{p.nombre}: </Text>
             {p.intervencion}
+            {p.enlace ? (
+              <>
+                {" — "}
+                <Link src={p.enlace} style={styles.link}>
+                  {p.enlace.replace(/^https?:\/\//, "")}
+                </Link>
+              </>
+            ) : null}
           </Text>
         ))}
+
+        <Text style={styles.sectionTitle}>Información adicional</Text>
+        <Text style={styles.paragraph}>
+          <Text style={{ fontFamily: "Helvetica-Bold" }}>Herramientas: </Text>
+          {cv.herramientas.join(", ")}
+        </Text>
+        {cv.idiomas.length > 0 ? (
+          <Text style={styles.paragraph}>
+            <Text style={{ fontFamily: "Helvetica-Bold" }}>Idiomas: </Text>
+            {cv.idiomas.map((i) => `${i.nombre} (${i.nivel})`).join(" · ")}
+          </Text>
+        ) : null}
+        <Text style={styles.paragraph}>
+          <Text style={{ fontFamily: "Helvetica-Bold" }}>Disponibilidad: </Text>
+          {cv.disponibilidad}
+        </Text>
       </Page>
     </Document>
   );

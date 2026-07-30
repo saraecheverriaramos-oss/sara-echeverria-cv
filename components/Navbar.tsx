@@ -4,6 +4,7 @@ import { useState } from "react";
 import { Menu, X } from "lucide-react";
 import { ThemeToggle } from "./ThemeToggle";
 import { Container } from "./ui/Container";
+import { perfil } from "@/data/profile";
 
 const links = [
   { href: "#perfil", label: "Perfil" },
@@ -23,7 +24,7 @@ export function Navbar() {
     <header className="sticky top-0 z-50 border-b border-line/70 bg-paper/85 backdrop-blur">
       <Container className="flex h-16 items-center justify-between">
         <a href="#inicio" className="font-serif text-lg tracking-tight">
-          Sara Echeverría
+          {perfil.nombre}
         </a>
 
         <nav className="hidden items-center gap-6 lg:flex" aria-label="Navegación principal">

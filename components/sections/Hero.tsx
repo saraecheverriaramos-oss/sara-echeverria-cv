@@ -1,7 +1,7 @@
+import Image from "next/image";
 import { ArrowRight, Download, MapPin } from "lucide-react";
 import { perfil } from "@/data/profile";
 import { Container } from "@/components/ui/Container";
-import { PendingTag } from "@/components/ui/PendingTag";
 import { HeroMarquee } from "./HeroMarquee";
 
 const rolesClave = [
@@ -32,6 +32,7 @@ export function Hero() {
           </h1>
 
           <p className="mt-6 max-w-xl text-lg leading-relaxed text-ink-muted">{perfil.propuestaValorBreve}</p>
+          <p className="mt-3 max-w-xl text-sm text-ink-muted/80">{perfil.disponibilidad}</p>
 
           <div className="mt-9 flex flex-wrap items-center gap-4">
             <a
@@ -56,15 +57,7 @@ export function Hero() {
                 <Download size={15} aria-hidden />
                 Descargar CV en PDF
               </a>
-            ) : (
-              <span
-                aria-disabled
-                className="inline-flex cursor-not-allowed items-center gap-2 text-sm font-medium text-ink-muted/50 underline decoration-dashed decoration-1 underline-offset-4"
-              >
-                <Download size={15} aria-hidden />
-                CV en PDF — pendiente de incorporar
-              </span>
-            )}
+            ) : null}
           </div>
 
           <div className="mt-12 border-t border-line pt-6">
@@ -73,11 +66,17 @@ export function Hero() {
         </div>
 
         <div className="flex justify-center lg:justify-end">
-          <figure className="relative flex aspect-[4/5] w-full max-w-sm flex-col items-center justify-center gap-4 rounded-[2rem] border border-line bg-paper-muted p-8 text-center">
-            <span className="font-serif text-6xl text-accent">SE</span>
-            <PendingTag>Fotografía profesional — pendiente de incorporar</PendingTag>
-            <figcaption className="sr-only">Espacio reservado para la fotografía profesional de Sara Echeverría</figcaption>
-          </figure>
+          <div className="relative aspect-[4/5] w-full max-w-sm overflow-hidden rounded-[2rem] border border-line bg-paper-muted">
+            <Image
+              src="/images/sara-echeverria-hero.jpg"
+              alt="Sara Echeverría Ramos, profesional de Dirección de Personas y Gestión Empresarial"
+              fill
+              priority
+              sizes="(min-width: 1024px) 384px, (min-width: 640px) 60vw, 90vw"
+              className="object-cover"
+              style={{ objectPosition: "50% 18%" }}
+            />
+          </div>
         </div>
       </Container>
     </section>
