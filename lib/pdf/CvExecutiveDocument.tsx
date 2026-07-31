@@ -34,7 +34,7 @@ Font.register({
 
 // Puesto de Bellotza reformulado para los CV ejecutivos/ATS (mismo hecho que
 // `data/profile.ts`, solo redactado de forma más directa para estos documentos).
-const BELLOTZA_PUESTO_ATS = "Propietaria y gerente · Empresaria autónoma";
+const BELLOTZA_PUESTO_ATS = "Fundadora, propietaria y gerente";
 
 // Paleta idéntica a la del CV visual principal, pero usada con más
 // moderación: sin tarjetas de hitos, sin cabecera de color intenso —
@@ -339,7 +339,8 @@ function Header({ cv }: { cv: CvContent }) {
 }
 
 export function CvExecutiveDocument({ cv }: { cv: CvContent }) {
-  const [, bellotza, aisa] = cv.experiencia;
+  const bellotza = cv.experiencia.find((e) => e.id === "bellotza")!;
+  const aisa = cv.experiencia.find((e) => e.id === "promociones-aisa-cuatro")!;
 
   return (
     <Document title={`${cv.nombre} — ${cv.titular}`} author={cv.nombre} language="es">
@@ -362,8 +363,9 @@ export function CvExecutiveDocument({ cv }: { cv: CvContent }) {
           <View style={styles.expBlock} wrap={false}>
             <View style={styles.expHeaderRow}>
               <Text style={styles.expEmpresa}>{cv.etapaTitulo}</Text>
-              <Text style={styles.expPeriodo}>2024 — actualidad</Text>
+              <Text style={styles.expPeriodo}>2023 — actualidad</Text>
             </View>
+            <Text style={[styles.paragraph, { marginTop: 3, marginBottom: 6 }]}>{cv.etapaTexto}</Text>
             {cv.etapaBullets.map((r) => (
               <View key={r} style={styles.bulletRow}>
                 <Text style={styles.bulletMark}>—</Text>
@@ -429,12 +431,12 @@ export function CvExecutiveDocument({ cv }: { cv: CvContent }) {
             <Text style={styles.calloutTexto}>{cv.bloqueEspecifico.texto}</Text>
           </View>
 
-          <Text style={[styles.sectionLabel, { marginTop: 16 }]}>Formación</Text>
+          <Text style={[styles.sectionLabel, { marginTop: 13 }]}>Formación</Text>
           {cv.formacionAts.map((f) => (
             <FormacionLine key={f.id} item={f} />
           ))}
 
-          <Text style={[styles.sectionLabel, { marginTop: 12 }]}>Competencias complementarias</Text>
+          <Text style={[styles.sectionLabel, { marginTop: 10 }]}>Competencias complementarias</Text>
           {cv.competenciasComplementarias.map((grupo) => (
             <Text key={grupo.area} style={styles.competLine}>
               <Text style={styles.competArea}>{grupo.area}: </Text>
@@ -442,7 +444,7 @@ export function CvExecutiveDocument({ cv }: { cv: CvContent }) {
             </Text>
           ))}
 
-          <Text style={[styles.sectionLabel, { marginTop: 10 }]}>Herramientas</Text>
+          <Text style={[styles.sectionLabel, { marginTop: 8 }]}>Herramientas</Text>
           <View style={styles.herramientasRow}>
             {cv.herramientasCategorizadas.map((grupo) => (
               <Text key={grupo.categoria} style={styles.herramientasCategoria}>
@@ -451,6 +453,9 @@ export function CvExecutiveDocument({ cv }: { cv: CvContent }) {
               </Text>
             ))}
           </View>
+          {cv.notaSecundaria ? (
+            <Text style={[styles.herramientasCategoria, { marginTop: 1, fontSize: 8.5 }]}>{cv.notaSecundaria}</Text>
+          ) : null}
         </View>
 
         <View style={styles.footerBar}>

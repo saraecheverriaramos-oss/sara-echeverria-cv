@@ -30,19 +30,6 @@ export function Competencias() {
           );
         })}
       </div>
-
-      <Reveal delay={0.2}>
-        <div className="mt-10 border-t border-line pt-8">
-          <h3 className="font-serif text-lg text-accent">Herramientas</h3>
-          <ul className="mt-4 flex flex-wrap gap-2">
-            {perfil.herramientas.map((item) => (
-              <li key={item} className="rounded-full border border-line px-3 py-1 text-sm text-ink-muted">
-                {item}
-              </li>
-            ))}
-          </ul>
-        </div>
-      </Reveal>
     </Section>
   );
 }

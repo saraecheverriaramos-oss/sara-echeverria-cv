@@ -14,7 +14,7 @@ export function PerfilEjecutivo() {
     <Section id="perfil" eyebrow="Perfil ejecutivo" title="Dirección construida desde la experiencia empresarial">
       <div className="mt-8 max-w-2xl">
         <p className="text-lg leading-relaxed text-ink-muted">
-          Trayectoria construida desde la dirección, la toma de decisiones y la gestión integral de negocios propios.
+          He construido mi trayectoria desde la dirección, la toma de decisiones y la gestión integral de negocios propios.
         </p>
       </div>
 

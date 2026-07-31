@@ -32,7 +32,7 @@ export const perfil: PerfilProfesional = {
     "Más de 20 años dirigiendo negocios propios, con formación en Recursos Humanos, Prevención de Riesgos Laborales e inteligencia artificial aplicada a la gestión.",
 
   propuestaValorBreve:
-    "Más de dos décadas dirigiendo negocios propios — personas, finanzas, compras y clientes — combinadas con formación en Dirección de Recursos Humanos y Prevención de Riesgos Laborales, y aplicación práctica de inteligencia artificial a la gestión.",
+    "Llevo más de dos décadas dirigiendo negocios propios — personas, finanzas, compras y clientes — combinadas con formación en Dirección de Recursos Humanos y Prevención de Riesgos Laborales, y aplicación práctica de inteligencia artificial a la gestión.",
 
   // Encabezado corto de disponibilidad geográfica (no un domicilio ni una
   // limitación de búsqueda): se muestra junto al contacto en la web y en los
@@ -41,10 +41,10 @@ export const perfil: PerfilProfesional = {
   disponibilidad: "Disponibilidad para proyectos en Euskadi, Navarra y otras ubicaciones según la posición",
 
   resumenEjecutivo:
-    "Sara Echeverría Ramos dirige negocios propios desde 2001. Como propietaria, empresaria autónoma y gerente, ha llevado la gestión integral de tres establecimientos comerciales — organización, compras, personal, atención al cliente y control económico — y, entre 2015 y 2020, la dirección societaria y financiera de Promociones AISA Cuatro S.L. como socia, administradora solidaria y gerente. Sobre esa base empresarial ha cursado la Diplomatura en Relaciones Laborales (UPNA) y el Máster en Dirección de Recursos Humanos y Gestión de Personas (ESIC Universidad), y cursa el Máster Universitario en Prevención de Riesgos Laborales. En paralelo desarrolla páginas web y aplica de forma práctica la inteligencia artificial a la gestión, la comunicación y la productividad. Su objetivo actual es incorporar esa experiencia, formación y capacidad de gestión a una organización.",
+    "He desarrollado más de veinte años de experiencia en dirección y gestión integral de negocios propios. Como fundadora, propietaria y gerente de Bellotza (2001–2023), dirigí tres establecimientos y coordiné equipos de hasta 15 personas. Posteriormente, como socia al 50 %, administradora solidaria, gerente y responsable financiera de Promociones AISA Cuatro S.L., participé en la dirección societaria y económica de un proyecto de construcción y promoción inmobiliaria con un volumen aproximado de 1.000.000 €. Soy diplomada en Relaciones Laborales y he completado el Máster en Dirección de Recursos Humanos y Gestión de Personas; estoy matriculada en el Máster Universitario en Prevención de Riesgos Laborales para el curso 2026–2027. En paralelo desarrollo páginas web y aplico de forma práctica la inteligencia artificial a la gestión, la comunicación y la productividad.",
 
   resumenBreve:
-    "Sara Echeverría Ramos dirige negocios propios desde 2001: gestión integral de tres establecimientos como propietaria y gerente, y dirección societaria y financiera de Promociones AISA Cuatro S.L. (2015–2020). Formación en Relaciones Laborales y en Dirección de Recursos Humanos y Gestión de Personas, con el Máster Universitario en Prevención de Riesgos Laborales en curso. Desarrolla páginas web y aplica de forma práctica la inteligencia artificial a la gestión, la comunicación y la productividad.",
+    "He desarrollado más de veinte años de experiencia en dirección y gestión integral de negocios propios. Como fundadora, propietaria y gerente de Bellotza (2001–2023), dirigí tres establecimientos y coordiné equipos de hasta 15 personas. Posteriormente, como socia al 50 %, administradora solidaria, gerente y responsable financiera de Promociones AISA Cuatro S.L., participé en la dirección societaria y económica de un proyecto de construcción y promoción inmobiliaria con un volumen aproximado de 1.000.000 €. Soy diplomada en Relaciones Laborales y he completado el Máster en Dirección de Recursos Humanos y Gestión de Personas; estoy matriculada en el Máster Universitario en Prevención de Riesgos Laborales para el curso 2026–2027. Actualmente desarrollo páginas web y aplico inteligencia artificial a la gestión, la comunicación y la productividad.",
 
   pilares: [
     {
@@ -60,7 +60,7 @@ export const perfil: PerfilProfesional = {
     {
       titulo: "Visión societaria y financiera",
       descripcion:
-        "Socia, administradora solidaria y gerente de Promociones AISA Cuatro S.L., con responsabilidad sobre la gestión económica, contractual y de proveedores del proyecto.",
+        "Socia al 50 %, administradora solidaria, gerente y responsable financiera de Promociones AISA Cuatro S.L., con responsabilidad sobre la gestión económica, contractual y de proveedores de un proyecto de construcción y promoción inmobiliaria.",
     },
     {
       titulo: "Transformación digital e IA",
@@ -70,42 +70,60 @@ export const perfil: PerfilProfesional = {
     {
       titulo: "Prevención, formación y desarrollo",
       descripcion:
-        "Máster Universitario en Prevención de Riesgos Laborales y habilitación docente en Formación Profesional, ambos en curso.",
+        "Matriculada en el Máster Universitario en Prevención de Riesgos Laborales para el curso 2026–2027, y habilitación docente en Formación Profesional en curso.",
     },
   ],
 
   experiencia: [
     {
       id: "consultoria-independiente",
-      empresa: "Consultoría independiente — desarrollo digital e IA aplicada",
+      empresa: "Formación de posgrado, proyectos digitales e IA aplicada",
       ubicacion: "Oñati / Pamplona",
       sector: null,
       puesto: "Profesional independiente",
       periodo: "2024 — actualidad",
       contexto:
-        "Etapa activa de especialización profesional: formación de posgrado, desarrollo de páginas web y aplicación práctica de inteligencia artificial a proyectos empresariales.",
+        "Formación especializada y desarrollo de proyectos digitales con los que amplío y actualizo una trayectoria empresarial consolidada.",
       responsabilidades: [
-        "Creación y gestión de páginas web para proyectos empresariales.",
-        "Aplicación de inteligencia artificial a contenidos, comunicación, gestión y productividad.",
-        "Desarrollo y organización de activos digitales.",
-        "Formación de posgrado en Dirección de Recursos Humanos, Prevención de Riesgos Laborales y habilitación docente.",
+        "Finalización del Máster en Dirección de Recursos Humanos y Gestión de Personas en ESIC Universidad.",
+        "Matriculación en el Máster Universitario en Prevención de Riesgos Laborales de la UPNA para el curso 2026–2027.",
+        "Formación para la Habilitación de Docencia en Grados A, B y C del Sistema de Formación Profesional.",
+        "Desarrollo y gestión de páginas web y contenidos digitales para proyectos empresariales.",
+        "Aplicación de inteligencia artificial generativa a documentación, comunicación, organización y productividad.",
       ],
-      competencias: ["Transformación digital", "Inteligencia artificial aplicada", "Formación continua"],
+      competencias: ["Transformación digital", "Inteligencia artificial aplicada", "Formación de posgrado"],
+    },
+    {
+      id: "transicion-profesional",
+      empresa: "Transición y actualización profesional",
+      ubicacion: null,
+      sector: null,
+      puesto: "Revisión y actualización de la trayectoria profesional",
+      periodo: "2023 — 2024",
+      contexto:
+        "Tras finalizar una etapa empresarial de más de veinte años, inicié un proceso de revisión, actualización y orientación de mi trayectoria profesional. Este periodo lo centré en ampliar perspectivas, definir una nueva dirección profesional y preparar la integración de mi experiencia empresarial con la gestión de personas, la administración y las nuevas herramientas digitales.",
+      responsabilidades: [
+        "Transición profesional tras finalizar una etapa de más de veinte años de dirección y gestión de negocios propios.",
+        "Revisión y actualización del perfil hacia posiciones de gerencia, administración, gestión de personas y transformación digital.",
+        "Ampliación de conocimientos y preparación de una nueva etapa profesional dentro de una organización.",
+      ],
+      competencias: ["Actualización profesional", "Reorientación profesional"],
     },
     {
       id: "bellotza",
       empresa: "Bellotza",
       ubicacion: "Oñati, Gipuzkoa",
       sector: "Comercio minorista — floristería, regalo, moda, decoración e interiorismo",
-      puesto: "Propietaria, empresaria autónoma y gerente",
+      puesto: "Fundadora, propietaria y gerente",
       periodo: "2001 — 2023",
-      contexto: "Creación, puesta en marcha y dirección integral de tres establecimientos comerciales.",
+      contexto:
+        "Creé y dirigí Bellotza durante más de veinte años, poniendo en marcha tres establecimientos y distintas líneas de actividad: floristería, artículos de regalo, moda, decoración e interiorismo. Coordiné equipos de hasta 15 personas y asumí la responsabilidad comercial, económica, administrativa, operativa y organizativa del negocio.",
       responsabilidades: [
-        "Dirección comercial, económica y administrativa de los tres establecimientos.",
-        "Compras, negociación y coordinación con proveedores.",
-        "Selección, coordinación y organización del trabajo de personas.",
-        "Atención y fidelización de clientes, escaparatismo e interiorismo comercial.",
-        "Coordinación con asesorías laborales, fiscales y contables.",
+        "Creación y puesta en marcha de tres establecimientos y distintas líneas de actividad.",
+        "Dirección integral durante más de veinte años.",
+        "Coordinación de equipos de hasta 15 personas.",
+        "Responsabilidad comercial, económica, administrativa y operativa.",
+        "Compras, proveedores, clientes y coordinación con asesorías.",
       ],
       competencias: ["Dirección y gestión empresarial", "Gestión comercial", "Dirección de personas"],
     },
@@ -113,16 +131,16 @@ export const perfil: PerfilProfesional = {
       id: "promociones-aisa-cuatro",
       empresa: "Promociones AISA Cuatro S.L.",
       ubicacion: null,
-      sector: "Promoción y gestión inmobiliaria",
+      sector: "Construcción y promoción inmobiliaria",
       puesto: "Socia al 50 %, administradora solidaria, gerente y responsable financiera",
       periodo: "2015 — 2020",
       contexto:
-        "Dirección societaria, financiera y administrativa del proyecto, con participación directa en la toma de decisiones.",
+        "Como socia al 50 %, administradora solidaria, gerente y responsable financiera de Promociones AISA Cuatro S.L., participé directamente en la dirección societaria, económica y administrativa de un proyecto de construcción y promoción inmobiliaria con un volumen aproximado de 1.000.000 €.",
       responsabilidades: [
-        "Gestión financiera: control de ingresos, gastos, presupuestos y facturación.",
-        "Coordinación de operaciones, proveedores y profesionales externos.",
-        "Gestión documental, contractual y societaria.",
-        "Coordinación con asesorías y seguimiento de proyectos.",
+        "Participación directa en decisiones societarias, financieras y operativas.",
+        "Gestión económica y administrativa de un proyecto de construcción y promoción inmobiliaria con un volumen aproximado de 1.000.000 €.",
+        "Control de presupuestos, facturación, ingresos y gastos.",
+        "Coordinación de proveedores y profesionales externos.",
       ],
       competencias: ["Dirección societaria", "Gestión financiera", "Dirección administrativa"],
     },
@@ -226,21 +244,126 @@ export const perfil: PerfilProfesional = {
   ],
 
   herramientas: [
-    "Microsoft Excel",
-    "Microsoft Word",
+    "Microsoft 365",
+    "Excel",
     "Google Workspace",
+    "Microsoft Planner",
+    "Jira",
+    "ChatGPT",
+    "Claude",
     "Canva",
     "GitHub",
-    "Hostinger",
     "Vercel",
-    "Herramientas de inteligencia artificial generativa",
+    "Hostinger",
+    "WordPress",
   ],
 
+  // Selección amplia y legible (16 herramientas + una nota de conocimientos
+  // básicos) para el CV Visual principal. Todas confirmadas expresamente
+  // por Sara; ningún nivel se presenta como superior al confirmado.
   herramientasCategorizadas: [
-    { categoria: "Gestión y productividad", items: ["Microsoft Excel", "Microsoft Word", "Google Workspace"] },
-    { categoria: "Diseño y comunicación", items: ["Canva"] },
-    { categoria: "Desarrollo y publicación web", items: ["GitHub", "Hostinger", "Vercel"] },
-    { categoria: "IA generativa", items: ["ChatGPT", "Claude"] },
+    { categoria: "Dirección, gestión y proyectos", items: ["Microsoft 365", "Excel", "Google Workspace", "Microsoft Planner", "Jira"] },
+    {
+      categoria: "IA, diseño y web",
+      items: [
+        "ChatGPT",
+        "Claude",
+        "Claude Code",
+        "Canva",
+        "GitHub",
+        "Vercel",
+        "Hostinger",
+        "IONOS",
+        "WordPress",
+        "Google Search Console",
+        "Google Business Profile",
+      ],
+    },
+  ],
+  herramientasNotaSecundaria:
+    "Conocimientos básicos: Power BI, Factusol, Contaplus, A3, Sage y herramientas de administración laboral.",
+
+  // Inventario completo de herramientas y entorno digital, para la sección
+  // web "Herramientas y entorno digital". Cada categoría distingue
+  // `gruposPorNivel` (herramientas agrupadas por su nivel real de uso,
+  // nunca superior al confirmado por Sara) de `aplicacion` (una frase de
+  // uso profesional): las capacidades y contextos de uso nunca se
+  // presentan como si fueran nombres de herramientas. Niveles admitidos:
+  // "Uso habitual", "Uso práctico", "Conocimientos básicos", "Uso con
+  // apoyo de inteligencia artificial".
+  herramientasEntornoDigital: [
+    {
+      categoria: "Dirección, análisis y productividad",
+      gruposPorNivel: [
+        { nivel: "Uso habitual", herramientas: ["Microsoft Excel", "Google Sheets", "Google Analytics", "Meta Business Suite"] },
+        { nivel: "Conocimientos básicos", herramientas: ["Power BI"] },
+      ],
+      aplicacion:
+        "Análisis y organización de información, tablas dinámicas, seguimiento de datos, reporting básico y apoyo a la toma de decisiones.",
+    },
+    {
+      categoria: "Gestión de proyectos",
+      gruposPorNivel: [
+        { nivel: "Uso habitual", herramientas: ["Microsoft Planner", "Jira"] },
+        { nivel: "Conocimientos básicos", herramientas: ["Trello", "Notion", "Asana", "ClickUp", "Google Tasks"] },
+      ],
+      aplicacion: "Planificación, seguimiento de tareas, organización de entregables y coordinación de proyectos.",
+    },
+    {
+      categoria: "Administración y gestión empresarial",
+      gruposPorNivel: [{ nivel: "Conocimientos básicos", herramientas: ["Factusol", "Contaplus", "A3", "Sage"] }],
+      aplicacion: "Facturación, gestión administrativa, organización de información económica y coordinación con asesorías.",
+    },
+    {
+      categoria: "Recursos Humanos y administración laboral",
+      gruposPorNivel: [
+        {
+          nivel: "Conocimientos básicos",
+          herramientas: ["A3 Nómina", "Sistema RED", "SILTRA", "Contrat@", "Certific@2", "DELTA"],
+        },
+      ],
+      aplicacion:
+        "Conocimientos básicos de herramientas de administración laboral: A3 Nómina, Sistema RED, SILTRA, Contrat@, Certific@2 y DELTA.",
+    },
+    {
+      categoria: "Inteligencia artificial y automatización",
+      gruposPorNivel: [{ nivel: "Uso habitual", herramientas: ["ChatGPT", "Claude", "Claude Code"] }],
+      aplicacion:
+        "Análisis y síntesis de información, redacción y revisión de documentos, organización de contenidos, apoyo a la investigación, desarrollo web asistido y productividad.",
+    },
+    {
+      categoria: "Comunicación, documentación y contenidos",
+      gruposPorNivel: [
+        {
+          nivel: "Uso habitual",
+          herramientas: [
+            "Canva",
+            "Microsoft PowerPoint",
+            "Microsoft Teams",
+            "Microsoft Outlook",
+            "Adobe Acrobat",
+            "iLovePDF",
+            "Google Drive",
+            "Google Docs",
+            "Google Calendar",
+            "WhatsApp Desktop",
+          ],
+        },
+      ],
+      aplicacion:
+        "Presentaciones, materiales corporativos, coordinación, organización documental, edición y preparación de PDF, comunicación y trabajo compartido.",
+    },
+    {
+      categoria: "Desarrollo, publicación y presencia digital",
+      gruposPorNivel: [
+        {
+          nivel: "Uso habitual",
+          herramientas: ["GitHub", "Vercel", "Hostinger", "IONOS", "WordPress", "Google Search Console", "Google Business Profile", "LinkedIn Pages"],
+        },
+        { nivel: "Uso práctico con apoyo de inteligencia artificial", herramientas: ["Next.js", "React", "TypeScript", "Tailwind CSS"] },
+      ],
+      aplicacion: "Creación y mantenimiento de páginas web, gestión de repositorios, despliegue, dominios, hosting, indexación y presencia digital.",
+    },
   ],
 
   formacion: [
@@ -290,6 +413,31 @@ export const perfil: PerfilProfesional = {
       detalle: "Aplicación práctica en creación de páginas web, automatización, organización, comunicación y productividad.",
     },
   ],
+
+  evolucionProfesional: {
+    titulo: "Una etapa de evolución y actualización profesional",
+    subtitulo:
+      "Más de veinte años de experiencia empresarial, reforzados con formación de posgrado, capacidades digitales y una nueva perspectiva profesional.",
+    bloques: [
+      {
+        titulo: "Experiencia consolidada",
+        texto:
+          "Más de veinte años de dirección, gestión económica, actividad comercial, coordinación de personas y toma de decisiones en negocios propios.",
+      },
+      {
+        titulo: "Actualización intensiva",
+        texto:
+          "Formación de posgrado, prevención, docencia, herramientas digitales, desarrollo web e inteligencia artificial aplicada.",
+      },
+      {
+        titulo: "Nueva aportación",
+        texto:
+          "Preparación para trasladar experiencia empresarial, madurez profesional y capacidades renovadas a una organización en crecimiento.",
+      },
+    ],
+    cierre:
+      "Preparada para aportar una trayectoria empresarial consolidada y conocimientos renovados en una nueva etapa de responsabilidad dentro de una organización.",
+  },
 
   filosofia: {
     estado: "editorial_pendiente_aprobacion",

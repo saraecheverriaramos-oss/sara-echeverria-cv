@@ -303,8 +303,25 @@ function Header({ cv }: { cv: CvContent }) {
   );
 }
 
+// Etapa 2023–actualidad: transición profesional tras Bellotza (2023–2024) y
+// formación de posgrado, proyectos digitales e IA aplicada (2024–actualidad).
+// Contenido propio del CV visual, no derivado de `cvVariants` (ese modelo es
+// específico de los tres CV ejecutivos/ATS).
+const TRANSICION_BULLETS = [
+  "Cierre de una etapa de más de veinte años al frente de negocios propios.",
+  "Revisión y orientación de la trayectoria hacia gerencia, administración, gestión de personas y transformación digital.",
+  "Ampliación de conocimientos y preparación de una nueva etapa profesional dentro de una organización.",
+];
+
+const FORMACION_PROYECTOS_BULLETS = [
+  "Máster en Dirección de Recursos Humanos y Gestión de Personas — ESIC Universidad · 2025–2026 · Finalizado.",
+  "Aplicación de inteligencia artificial generativa a documentación, comunicación, organización y productividad.",
+  "Máster Universitario en Prevención de Riesgos Laborales — UPNA · Curso 2026–2027 · Matriculada.",
+];
+
 export function CvVisualDocument({ cv }: { cv: CvContent }) {
-  const [consultoria, bellotza, aisa] = cv.experiencia;
+  const bellotza = cv.experiencia.find((e) => e.id === "bellotza")!;
+  const aisa = cv.experiencia.find((e) => e.id === "promociones-aisa-cuatro")!;
 
   return (
     <Document title={`${cv.nombre} — CV`} author={cv.nombre} language="es">
@@ -345,11 +362,10 @@ export function CvVisualDocument({ cv }: { cv: CvContent }) {
 
       <Page size="A4" style={styles.page}>
         <View style={[styles.body, { paddingTop: 34, paddingBottom: 80 }]}>
-          <Text style={styles.sectionLabel}>2024 — Actualidad</Text>
-          <Text style={styles.sectionTitle}>Desarrollo digital, IA aplicada y especialización profesional</Text>
-          <Text style={styles.paragraph}>{consultoria.contexto}</Text>
-          <View style={{ marginTop: 6 }}>
-            {consultoria.responsabilidades.map((r) => (
+          <Text style={styles.sectionLabel}>2023 — 2024</Text>
+          <Text style={styles.sectionTitle}>Transición y actualización profesional</Text>
+          <View>
+            {TRANSICION_BULLETS.map((r) => (
               <View key={r} style={styles.bulletRow}>
                 <Text style={styles.bulletMark}>—</Text>
                 <Text style={styles.bulletText}>{r}</Text>
@@ -357,7 +373,17 @@ export function CvVisualDocument({ cv }: { cv: CvContent }) {
             ))}
           </View>
 
-          <Text style={[styles.sectionLabel, { marginTop: 18 }]}>Proyectos digitales</Text>
+          <Text style={[styles.sectionLabel, { marginTop: 14 }]}>2024 — actualidad</Text>
+          <Text style={styles.sectionTitle}>Formación de posgrado, proyectos digitales e IA aplicada</Text>
+          <View>
+            {FORMACION_PROYECTOS_BULLETS.map((r) => (
+              <View key={r} style={styles.bulletRow}>
+                <Text style={styles.bulletMark}>—</Text>
+                <Text style={styles.bulletText}>{r}</Text>
+              </View>
+            ))}
+          </View>
+          <Text style={[styles.sectionLabel, { marginTop: 12 }]}>Proyectos digitales</Text>
           <View style={styles.projectRow}>
             {cv.proyectos
               .filter((p) => p.enlace)
@@ -374,7 +400,7 @@ export function CvVisualDocument({ cv }: { cv: CvContent }) {
               ))}
           </View>
 
-          <Text style={[styles.sectionLabel, { marginTop: 18 }]}>Formación</Text>
+          <Text style={[styles.sectionLabel, { marginTop: 14 }]}>Formación</Text>
           {cv.formacion.map((f) => (
             <Text key={f.id} style={styles.formLine}>
               <Text style={styles.formTitulo}>{f.titulo}</Text>
@@ -385,8 +411,8 @@ export function CvVisualDocument({ cv }: { cv: CvContent }) {
             </Text>
           ))}
 
-          <Text style={[styles.sectionLabel, { marginTop: 14 }]}>Competencias</Text>
-          <View style={styles.competGrid}>
+          <Text style={[styles.sectionLabel, { marginTop: 8 }]}>Competencias</Text>
+          <View style={[styles.competGrid, { marginTop: 4 }]}>
             {cv.competencias.map((grupo) => (
               <View key={grupo.area} style={styles.competCard}>
                 <Text style={styles.competArea}>{grupo.area}</Text>
@@ -395,10 +421,24 @@ export function CvVisualDocument({ cv }: { cv: CvContent }) {
             ))}
           </View>
 
-          <Text style={[styles.sectionLabel, { marginTop: 14 }]}>Herramientas e idiomas</Text>
-          <Text style={styles.paragraph}>
-            {cv.herramientas.join(" · ")}
-            {cv.idiomas.length > 0 ? `   |   ${cv.idiomas.map((i) => `${i.nombre} (${i.nivel})`).join(" · ")}` : ""}
+          <Text style={[styles.sectionLabel, { marginTop: 6 }]}>Herramientas</Text>
+          <View style={[styles.competGrid, { marginTop: 2 }]}>
+            {cv.herramientasVisual.map((grupo) => (
+              <View key={grupo.categoria} style={styles.competCard}>
+                <Text style={styles.competArea}>{grupo.categoria}</Text>
+                <Text style={styles.competItems}>{grupo.items.join(" · ")}</Text>
+              </View>
+            ))}
+          </View>
+          <Text style={[styles.competItems, { marginTop: 2 }]}>
+            {cv.herramientasNotaSecundaria}
+            {cv.idiomas.length > 0 ? (
+              <>
+                {"  |  "}
+                <Text style={styles.competArea}>Idiomas: </Text>
+                {cv.idiomas.map((i) => i.nombre).join(" · ")} (nivel básico, sin acreditación oficial)
+              </>
+            ) : null}
           </Text>
         </View>
 

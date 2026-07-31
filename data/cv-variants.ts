@@ -23,7 +23,7 @@ export const cvVariants: CvVariant[] = [
     titular: "Dirección y Gestión Empresarial",
     subtitulo: "Administración · Personas · Operaciones · Transformación digital",
     resumen:
-      "Profesional con más de veinte años de experiencia en creación, dirección y gestión integral de negocios propios. Ha asumido responsabilidades económicas, administrativas, comerciales, operativas y de coordinación de personas, además de dirección societaria y financiera en el ámbito inmobiliario. Diplomada en Relaciones Laborales y Máster en Dirección de Recursos Humanos y Gestión de Personas. Actualmente desarrolla proyectos digitales y aplica inteligencia artificial a la organización, la comunicación y la productividad empresarial.",
+      "Cuento con más de veinte años de experiencia en creación, dirección y gestión integral de negocios propios. He asumido responsabilidades económicas, administrativas, comerciales y operativas, además de coordinar equipos de hasta 15 personas. Como socia al 50 %, administradora solidaria, gerente y responsable financiera de una empresa de construcción y promoción inmobiliaria, he participado directamente en la dirección societaria y económica de un proyecto con un volumen aproximado de 1.000.000 €. Soy diplomada en Relaciones Laborales y he completado el Máster en Dirección de Recursos Humanos y Gestión de Personas. Actualmente desarrollo proyectos digitales y aplico inteligencia artificial a la organización, la comunicación y la productividad empresarial.",
     ordenCompetencias: ["Dirección y gestión", "Visión empresarial", "Recursos Humanos y personas", "Transformación digital"],
     palabrasClave: ["Gerencia", "Dirección de Operaciones", "Gestión empresarial", "Dirección administrativa", "Dirección de Personas"],
     conFoto: false,
@@ -48,33 +48,42 @@ export const cvVariants: CvVariant[] = [
       { area: "Personas y organización", items: ["Coordinación de personas", "Relaciones laborales", "Coordinación con asesorías"] },
       { area: "Transformación digital", items: ["Desarrollo web", "IA generativa aplicada", "Productividad"] },
     ],
-    etapaTitulo: "Proyectos independientes de desarrollo digital e IA aplicada",
+    etapaTitulo: "Actualización directiva y proyectos digitales",
+    etapaTexto:
+      "Actualización profesional tras más de veinte años de dirección y gestión de negocios propios, orientada a integrar experiencia empresarial, gestión de personas y nuevas herramientas digitales.",
     etapaBullets: [
-      "Desarrollo y gestión de páginas web empresariales.",
-      "Organización de contenidos, información y activos digitales.",
-      "Aplicación de IA generativa a comunicación, documentación y productividad.",
+      "Máster en Dirección de Recursos Humanos y Gestión de Personas, finalizado.",
+      "Desarrollo y gestión de páginas web y contenidos para proyectos empresariales.",
+      "Aplicación de IA generativa a documentación, comunicación, organización y productividad.",
+      "Formación en prevención de riesgos laborales y docencia para Formación Profesional.",
     ],
     bellotzaBullets: [
-      "Dirección integral de tres establecimientos, con responsabilidad sobre actividad comercial, administración, gestión económica y operaciones.",
-      "Compras, negociación y coordinación de proveedores.",
-      "Organización y coordinación del trabajo de las personas vinculadas al negocio.",
+      "Creación y dirección integral de tres establecimientos.",
+      "Coordinación de equipos de hasta 15 personas.",
       "Toma de decisiones comerciales, económicas y administrativas.",
+      "Compras, negociación y proveedores.",
       "Coordinación con asesorías laborales, fiscales y contables.",
-      "Gestión continuada de tres establecimientos durante más de dos décadas.",
+      "Dirección empresarial continuada durante más de veinte años.",
     ],
     aisaBullets: [
       "Dirección societaria y participación en decisiones estratégicas y operativas.",
-      "Gestión financiera: ingresos, gastos, presupuestos y facturación.",
-      "Coordinación de proveedores, profesionales externos y seguimiento de proyectos.",
-      "Gestión documental, contractual y administrativa.",
+      "Responsabilidad financiera y administrativa en un proyecto de construcción y promoción inmobiliaria con un volumen aproximado de 1.000.000 €.",
+      "Control de presupuestos, ingresos, gastos y facturación.",
+      "Coordinación de proveedores, profesionales externos y seguimiento del proyecto.",
     ],
     proyectosOverride: {},
     bloqueEspecifico: {
       titulo: "Aportación directiva",
       texto:
-        "Experiencia integrando visión comercial, control económico, organización de personas y coordinación operativa en la gestión de negocios propios.",
+        "Una trayectoria empresarial consolidada, reforzada con conocimientos actuales y capacidad para adaptarse a nuevas formas de gestión y trabajo.",
     },
     formacionOrdenAts: ["master-rrhh-esic", "master-prl-upna", "relaciones-laborales", "tecnico-superior-af", "habilitacion-docente-fp"],
+    herramientasCategorizadas: [
+      { categoria: "Gestión y productividad", items: ["Excel", "Microsoft 365", "Google Workspace"] },
+      { categoria: "Gestión de proyectos", items: ["Microsoft Planner", "Jira"] },
+      { categoria: "IA y análisis", items: ["ChatGPT", "Claude", "Power BI (básico)"] },
+      { categoria: "Diseño y desarrollo web", items: ["Canva", "GitHub", "Vercel", "WordPress"] },
+    ],
   },
   {
     id: "rrhh",
@@ -82,7 +91,7 @@ export const cvVariants: CvVariant[] = [
     nombreArchivo: "Sara-Echeverria-Ramos-CV-Direccion-Personas-RRHH.pdf",
     titular: "Dirección Empresarial y Gestión de Personas",
     resumen:
-      "Profesional con más de veinte años de experiencia en dirección empresarial y gestión directa de personas en negocios propios. Como propietaria y gerente ha asumido la selección, incorporación, organización del trabajo, coordinación cotidiana y relación con asesorías laborales. Diplomada en Relaciones Laborales y Máster en Dirección de Recursos Humanos y Gestión de Personas, aporta una visión de RR. HH. conectada con las necesidades del negocio, la transformación digital y la aplicación práctica de inteligencia artificial.",
+      "Cuento con más de veinte años de experiencia en dirección empresarial y gestión directa de personas en negocios propios. Como fundadora, propietaria y gerente de Bellotza, coordiné equipos de hasta 15 personas y asumí la organización del trabajo, la incorporación y la formación práctica, además de la coordinación con la asesoría laboral. Soy diplomada en Relaciones Laborales y he completado el Máster en Dirección de Recursos Humanos y Gestión de Personas. Aporto una visión de la gestión de personas conectada con las necesidades del negocio, la transformación digital y la aplicación práctica de inteligencia artificial.",
     ordenCompetencias: ["Recursos Humanos y personas", "Dirección y gestión", "Transformación digital", "Visión empresarial"],
     palabrasClave: ["Dirección de Recursos Humanos", "Dirección de Personas", "Selección", "Formación y desarrollo", "Relaciones laborales"],
     conFoto: true,
@@ -107,25 +116,27 @@ export const cvVariants: CvVariant[] = [
       { area: "Transformación digital", items: ["Desarrollo web", "IA generativa aplicada", "Comunicación digital"] },
       { area: "Visión empresarial", items: ["Gestión integral", "Visión comercial", "Capacidad de ejecución"] },
     ],
-    etapaTitulo: "Proyectos digitales y especialización en Dirección de Personas",
+    etapaTitulo: "Especialización en gestión de personas y actualización digital",
+    etapaTexto:
+      "Proceso de actualización profesional orientado a conectar más de veinte años de dirección empresarial y coordinación de personas con formación especializada en Recursos Humanos, Relaciones Laborales, prevención y herramientas digitales.",
     etapaBullets: [
-      "Desarrollo y gestión de páginas web y contenidos para proyectos empresariales.",
-      "Aplicación de inteligencia artificial a comunicación, organización, documentación y productividad.",
-      "Finalización del Máster en Dirección de Recursos Humanos y Gestión de Personas.",
+      "Máster en Dirección de Recursos Humanos y Gestión de Personas, finalizado en ESIC Universidad.",
+      "Profundización en relaciones laborales, organización, selección, formación y gestión de personas.",
       "Matriculación en el Máster Universitario en Prevención de Riesgos Laborales.",
-      "Formación docente en curso.",
+      "Formación docente para Formación Profesional.",
+      "Aplicación de herramientas digitales e IA a comunicación, documentación y organización del trabajo.",
     ],
     bellotzaBullets: [
-      "Selección, incorporación y organización del trabajo de las personas vinculadas a los tres establecimientos.",
-      "Coordinación cotidiana y comunicación directa con las personas del negocio.",
-      "Formación práctica en procedimientos, producto, atención al cliente y operativa.",
-      "Coordinación con asesorías laborales para documentación, contratación e incidencias.",
-      "Integración de la gestión de personas con las necesidades comerciales, económicas y organizativas del negocio.",
+      "Coordinación de equipos de hasta 15 personas en tres establecimientos.",
+      "Organización del trabajo, incorporación y formación práctica de las personas del negocio.",
+      "Coordinación con la asesoría laboral.",
+      "Integración de la gestión de personas con las necesidades comerciales y organizativas del negocio.",
     ],
     aisaBullets: [
-      "Coordinación con proveedores, asesorías y profesionales externos vinculados a la actividad.",
-      "Organización de información, documentación y seguimiento entre las partes implicadas.",
       "Participación en decisiones societarias, financieras y administrativas como socia y administradora solidaria.",
+      "Proyecto de construcción y promoción inmobiliaria con un volumen aproximado de 1.000.000 €.",
+      "Coordinación con proveedores, asesorías y profesionales externos.",
+      "Organización de información, documentación y seguimiento del proyecto.",
     ],
     proyectosOverride: {
       "art-motor-group":
@@ -136,9 +147,15 @@ export const cvVariants: CvVariant[] = [
     bloqueEspecifico: {
       titulo: "Propuesta de valor en personas",
       texto:
-        "Experiencia gestionando personas desde una visión integral del negocio, conectando organización, costes, clientes, proveedores y actividad comercial.",
+        "Experiencia empresarial y conocimientos actualizados para abordar la gestión de personas desde las necesidades concretas del negocio.",
     },
     formacionOrdenAts: ["master-rrhh-esic", "relaciones-laborales", "master-prl-upna", "habilitacion-docente-fp", "tecnico-superior-af"],
+    herramientasCategorizadas: [
+      { categoria: "Gestión y productividad", items: ["Microsoft 365", "Excel", "PowerPoint", "Outlook", "Microsoft Teams", "Google Workspace"] },
+      { categoria: "Gestión de proyectos", items: ["Microsoft Planner", "Jira"] },
+      { categoria: "IA y diseño", items: ["ChatGPT", "Claude", "Canva"] },
+    ],
+    notaSecundaria: "Conocimientos básicos de A3 Nómina, Sistema RED, SILTRA, Contrat@, Certific@2 y DELTA.",
   },
   {
     id: "gerencia",
@@ -146,7 +163,7 @@ export const cvVariants: CvVariant[] = [
     nombreArchivo: "Sara-Echeverria-Ramos-CV-Gerencia-Direccion-Administrativa.pdf",
     titular: "Gerencia · Dirección Administrativa y Financiera",
     resumen:
-      "Profesional con más de veinte años de experiencia en gerencia, dirección administrativa y gestión integral de negocios propios. Ha asumido responsabilidad directa sobre administración, control económico, facturación, compras, proveedores, operaciones y coordinación de personas en tres establecimientos comerciales. Como socia al 50 %, administradora solidaria, gerente y responsable financiera de Promociones AISA Cuatro S.L., participó en la dirección societaria, financiera y administrativa de la empresa. Se complementa con formación en Relaciones Laborales, Administración y Finanzas, RR. HH., desarrollo web e inteligencia artificial aplicada a la gestión.",
+      "Cuento con más de veinte años de experiencia en gerencia, dirección administrativa y gestión integral de negocios propios. He asumido responsabilidad directa sobre administración, control económico, facturación, compras, gestión de proveedores, operaciones y coordinación de equipos de hasta 15 personas en tres establecimientos comerciales. Como socia al 50 %, administradora solidaria, gerente y responsable financiera de una empresa de construcción y promoción inmobiliaria, he participado en la dirección societaria, financiera y administrativa de un proyecto con un volumen aproximado de 1.000.000 €. Mi formación incluye la Diplomatura en Relaciones Laborales, el título de Técnico Superior en Administración y Finanzas y el Máster en Dirección de Recursos Humanos y Gestión de Personas, además de formación práctica en desarrollo web e inteligencia artificial aplicada a la gestión.",
     ordenCompetencias: ["Dirección y gestión", "Visión empresarial", "Transformación digital", "Recursos Humanos y personas"],
     palabrasClave: ["Gerencia", "Dirección Administrativa", "Dirección financiera", "Gestión empresarial", "Dirección de Operaciones"],
     conFoto: true,
@@ -171,27 +188,29 @@ export const cvVariants: CvVariant[] = [
       { area: "Transformación digital", items: ["Desarrollo web", "IA generativa aplicada", "Gestión documental digital"] },
       { area: "Personas y coordinación", items: ["Coordinación de personas", "Selección e incorporación", "Relaciones laborales"] },
     ],
-    etapaTitulo: "Proyectos independientes de desarrollo digital e IA aplicada",
+    etapaTitulo: "Actualización en gestión, digitalización e IA aplicada",
+    etapaTexto:
+      "Actualización profesional tras más de veinte años de gerencia y gestión integral, orientada a incorporar herramientas digitales, inteligencia artificial y nuevas capacidades de organización.",
     etapaBullets: [
-      "Desarrollo y gestión de páginas web y contenidos digitales para proyectos empresariales.",
-      "Organización de información, activos digitales e inventarios.",
-      "Aplicación de inteligencia artificial a documentación, comunicación, productividad y mejora del trabajo.",
-      "Organización de contenidos y flujos de información de los proyectos.",
+      "Reorientación del perfil tras más de veinte años de gerencia y gestión integral.",
+      "Actualización en Dirección de Recursos Humanos, administración, prevención y organización.",
+      "Desarrollo de páginas web, contenidos, inventarios y activos digitales.",
+      "Aplicación de inteligencia artificial a documentación, comunicación y productividad.",
+      "Preparación para trasladar experiencia empresarial y capacidades renovadas a una nueva organización.",
     ],
     bellotzaBullets: [
-      "Dirección integral de la operativa comercial, administrativa y económica de tres establecimientos.",
-      "Administración general y control económico.",
-      "Compras, negociación y gestión de proveedores.",
-      "Facturación, organización administrativa y resolución de incidencias operativas.",
+      "Dirección administrativa y económica de tres establecimientos durante más de veinte años.",
+      "Administración general, control económico y facturación.",
+      "Compras, negociación y proveedores.",
+      "Coordinación de equipos de hasta 15 personas.",
       "Coordinación con asesorías fiscales, contables y laborales.",
-      "Gestión continuada de tres establecimientos durante más de dos décadas.",
     ],
     aisaBullets: [
       "Participación directa en decisiones societarias, financieras y operativas.",
-      "Gestión de presupuestos, facturación y control de ingresos y gastos.",
-      "Gestión documental, contractual y administrativa de la sociedad y sus proyectos.",
+      "Responsabilidad financiera y administrativa sobre un proyecto de construcción y promoción inmobiliaria con un volumen aproximado de 1.000.000 €.",
+      "Control de presupuestos, facturación, ingresos y gastos.",
+      "Gestión documental, contractual y administrativa de la sociedad y del proyecto.",
       "Coordinación con proveedores, asesorías y profesionales externos.",
-      "Seguimiento de la ejecución de proyectos.",
     ],
     proyectosOverride: {
       "art-motor-group":
@@ -201,9 +220,15 @@ export const cvVariants: CvVariant[] = [
     },
     bloqueEspecifico: {
       titulo: "Aportación a la organización",
-      texto: "Visión integral de la empresa, combinando administración, control económico, operaciones, personas, proveedores y clientes.",
+      texto:
+        "Experiencia consolidada en administración y gestión empresarial, reforzada con formación reciente, competencias digitales y una visión actualizada de la organización.",
     },
     formacionOrdenAts: ["tecnico-superior-af", "relaciones-laborales", "master-rrhh-esic", "master-prl-upna", "habilitacion-docente-fp"],
+    herramientasCategorizadas: [
+      { categoria: "Gestión y administración", items: ["Excel", "Microsoft 365", "Outlook", "Google Workspace", "Factusol", "A3"] },
+      { categoria: "Organización y análisis", items: ["Microsoft Planner", "Jira", "Power BI (básico)"] },
+      { categoria: "Documentación e IA", items: ["Adobe Acrobat", "ChatGPT", "Claude"] },
+    ],
   },
 ];
 

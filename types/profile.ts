@@ -86,8 +86,30 @@ export interface PerfilProfesional {
   };
   contacto: DatoContacto[];
   idiomas: Idioma[];
-  /** Herramientas agrupadas por categoría, para el listado "Herramientas" de los CV ejecutivos/ATS. */
+  /** Selección curada de herramientas agrupadas, para el CV Visual principal (espacio limitado). */
   herramientasCategorizadas: { categoria: string; items: string[] }[];
+  /** Nota secundaria de conocimientos básicos (no confirmados como uso habitual) para el CV Visual. */
+  herramientasNotaSecundaria: string;
+  /**
+   * Inventario completo de herramientas y entorno digital, para la sección
+   * web "Herramientas y entorno digital". Cada categoría agrupa sus
+   * herramientas por `nivel` real de uso (nunca superior al confirmado por
+   * Sara) y añade `aplicacion`, una frase de uso profesional — las
+   * capacidades y contextos de uso nunca se presentan como si fueran
+   * nombres de herramientas.
+   */
+  herramientasEntornoDigital: {
+    categoria: string;
+    gruposPorNivel: { nivel: string; herramientas: string[] }[];
+    aplicacion: string;
+  }[];
+  /** Sección web que enmarca la etapa 2023–actualidad como evolución profesional, no como una experiencia laboral literal. */
+  evolucionProfesional: {
+    titulo: string;
+    subtitulo: string;
+    bloques: { titulo: string; texto: string }[];
+    cierre: string;
+  };
   cv: {
     archivoDisponible: boolean;
     visual: { ruta: string; nombreArchivo: string };
@@ -112,12 +134,18 @@ export interface CvVariant {
   bellotzaBullets: string[];
   /** Viñetas de Promociones AISA Cuatro reformuladas con el énfasis propio de esta variante. */
   aisaBullets: string[];
-  /** Título profesional de la etapa 2024–actualidad, adaptado al enfoque de esta variante. */
+  /** Título profesional de la etapa 2023–actualidad (transición + formación/proyectos), adaptado al enfoque de esta variante. */
   etapaTitulo: string;
-  /** Viñetas de la etapa 2024–actualidad adaptadas al enfoque de esta variante. */
+  /** Párrafo breve de introducción a la etapa 2023–actualidad, adaptado al enfoque de esta variante. */
+  etapaTexto: string;
+  /** Viñetas de la etapa 2023–actualidad adaptadas al enfoque de esta variante. */
   etapaBullets: string[];
   /** Bloque breve de página 2 con información relevante específica de esta variante. */
   bloqueEspecifico: { titulo: string; texto: string };
+  /** Herramientas agrupadas por categoría, priorizadas según el enfoque de esta variante del CV ejecutivo/ATS. */
+  herramientasCategorizadas: { categoria: string; items: string[] }[];
+  /** Nota secundaria opcional (conocimientos básicos, de menor peso visual) bajo la lista principal de herramientas. */
+  notaSecundaria?: string;
   /** IDs de `formacion` a mostrar (y en qué orden) en los CV ejecutivos/ATS de esta variante. */
   formacionOrdenAts: string[];
   /** Competencias prioritarias curadas para el CV ejecutivo/ATS (página 1): 2 grupos, entre 10 y 12 conceptos en total. */
