@@ -41,10 +41,10 @@ export const perfil: PerfilProfesional = {
   disponibilidad: "Disponibilidad para proyectos en Euskadi, Navarra y otras ubicaciones según la posición",
 
   resumenEjecutivo:
-    "He desarrollado más de veinte años de experiencia en dirección y gestión integral de negocios propios. Como fundadora, propietaria y gerente de Bellotza (2001–2023), dirigí tres establecimientos y coordiné equipos de hasta 15 personas. Posteriormente, como socia al 50 %, administradora solidaria, gerente y responsable financiera de Promociones AISA Cuatro S.L., participé en la dirección societaria y económica de un proyecto de construcción y promoción inmobiliaria con un volumen aproximado de 1.000.000 €. Soy diplomada en Relaciones Laborales y he completado el Máster en Dirección de Recursos Humanos y Gestión de Personas; estoy matriculada en el Máster Universitario en Prevención de Riesgos Laborales para el curso 2026–2027. En paralelo desarrollo páginas web y aplico de forma práctica la inteligencia artificial a la gestión, la comunicación y la productividad.",
+    "He desarrollado más de veinte años de experiencia en dirección y gestión integral de negocios propios. Como fundadora, propietaria y gerente de Bellotza (2001–2023), dirigí tres establecimientos y coordiné equipos de hasta 15 personas. Posteriormente, como socia al 50 %, administradora solidaria, gerente y responsable financiera de Promociones AISA Cuatro S.L., participé en la dirección societaria, económica y administrativa de un proyecto de construcción y promoción inmobiliaria. Soy diplomada en Relaciones Laborales y he completado el Máster en Dirección de Recursos Humanos y Gestión de Personas; estoy matriculada en el Máster Universitario en Prevención de Riesgos Laborales para el curso 2026–2027. En paralelo desarrollo páginas web y aplico de forma práctica la inteligencia artificial a la gestión, la comunicación y la productividad.",
 
   resumenBreve:
-    "He desarrollado más de veinte años de experiencia en dirección y gestión integral de negocios propios. Como fundadora, propietaria y gerente de Bellotza (2001–2023), dirigí tres establecimientos y coordiné equipos de hasta 15 personas. Posteriormente, como socia al 50 %, administradora solidaria, gerente y responsable financiera de Promociones AISA Cuatro S.L., participé en la dirección societaria y económica de un proyecto de construcción y promoción inmobiliaria con un volumen aproximado de 1.000.000 €. Soy diplomada en Relaciones Laborales y he completado el Máster en Dirección de Recursos Humanos y Gestión de Personas; estoy matriculada en el Máster Universitario en Prevención de Riesgos Laborales para el curso 2026–2027. Actualmente desarrollo páginas web y aplico inteligencia artificial a la gestión, la comunicación y la productividad.",
+    "He desarrollado más de veinte años de experiencia en dirección y gestión integral de negocios propios. Como fundadora, propietaria y gerente de Bellotza (2001–2023), dirigí tres establecimientos y coordiné equipos de hasta 15 personas. Posteriormente, como socia al 50 %, administradora solidaria, gerente y responsable financiera de Promociones AISA Cuatro S.L., participé en la dirección societaria, económica y administrativa de un proyecto de construcción y promoción inmobiliaria. Soy diplomada en Relaciones Laborales y he completado el Máster en Dirección de Recursos Humanos y Gestión de Personas; estoy matriculada en el Máster Universitario en Prevención de Riesgos Laborales para el curso 2026–2027. Actualmente desarrollo páginas web y aplico inteligencia artificial a la gestión, la comunicación y la productividad.",
 
   pilares: [
     {
@@ -135,10 +135,10 @@ export const perfil: PerfilProfesional = {
       puesto: "Socia al 50 %, administradora solidaria, gerente y responsable financiera",
       periodo: "2015 — 2020",
       contexto:
-        "Como socia al 50 %, administradora solidaria, gerente y responsable financiera de Promociones AISA Cuatro S.L., participé directamente en la dirección societaria, económica y administrativa de un proyecto de construcción y promoción inmobiliaria con un volumen aproximado de 1.000.000 €.",
+        "Como socia al 50 %, administradora solidaria, gerente y responsable financiera de Promociones AISA Cuatro S.L., participé directamente en la dirección societaria, económica y administrativa de un proyecto de construcción y promoción inmobiliaria.",
       responsabilidades: [
         "Participación directa en decisiones societarias, financieras y operativas.",
-        "Gestión económica y administrativa de un proyecto de construcción y promoción inmobiliaria con un volumen aproximado de 1.000.000 €.",
+        "Gestión económica y administrativa de un proyecto de construcción y promoción inmobiliaria.",
         "Control de presupuestos, facturación, ingresos y gastos.",
         "Coordinación de proveedores y profesionales externos.",
       ],

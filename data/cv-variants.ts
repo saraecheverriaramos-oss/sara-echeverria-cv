@@ -23,7 +23,7 @@ export const cvVariants: CvVariant[] = [
     titular: "Dirección y Gestión Empresarial",
     subtitulo: "Administración · Personas · Operaciones · Transformación digital",
     resumen:
-      "Cuento con más de veinte años de experiencia en creación, dirección y gestión integral de negocios propios. He asumido responsabilidades económicas, administrativas, comerciales y operativas, además de coordinar equipos de hasta 15 personas. Como socia al 50 %, administradora solidaria, gerente y responsable financiera de una empresa de construcción y promoción inmobiliaria, he participado directamente en la dirección societaria y económica de un proyecto con un volumen aproximado de 1.000.000 €. Soy diplomada en Relaciones Laborales y he completado el Máster en Dirección de Recursos Humanos y Gestión de Personas. Actualmente desarrollo proyectos digitales y aplico inteligencia artificial a la organización, la comunicación y la productividad empresarial.",
+      "Cuento con más de veinte años de experiencia en creación, dirección y gestión integral de negocios propios. He asumido responsabilidades económicas, administrativas, comerciales y operativas, además de coordinar equipos de hasta 15 personas. Como socia al 50 %, administradora solidaria, gerente y responsable financiera de una empresa de construcción y promoción inmobiliaria, he participado directamente en la dirección societaria, económica y administrativa del proyecto. Soy diplomada en Relaciones Laborales y he completado el Máster en Dirección de Recursos Humanos y Gestión de Personas. Actualmente desarrollo proyectos digitales y aplico inteligencia artificial a la organización, la comunicación y la productividad empresarial.",
     ordenCompetencias: ["Dirección y gestión", "Visión empresarial", "Recursos Humanos y personas", "Transformación digital"],
     palabrasClave: ["Gerencia", "Dirección de Operaciones", "Gestión empresarial", "Dirección administrativa", "Dirección de Personas"],
     conFoto: false,
@@ -67,7 +67,7 @@ export const cvVariants: CvVariant[] = [
     ],
     aisaBullets: [
       "Dirección societaria y participación en decisiones estratégicas y operativas.",
-      "Responsabilidad financiera y administrativa en un proyecto de construcción y promoción inmobiliaria con un volumen aproximado de 1.000.000 €.",
+      "Responsabilidad financiera y administrativa en un proyecto de construcción y promoción inmobiliaria.",
       "Control de presupuestos, ingresos, gastos y facturación.",
       "Coordinación de proveedores, profesionales externos y seguimiento del proyecto.",
     ],
@@ -134,7 +134,7 @@ export const cvVariants: CvVariant[] = [
     ],
     aisaBullets: [
       "Participación en decisiones societarias, financieras y administrativas como socia y administradora solidaria.",
-      "Proyecto de construcción y promoción inmobiliaria con un volumen aproximado de 1.000.000 €.",
+      "Proyecto de construcción y promoción inmobiliaria.",
       "Coordinación con proveedores, asesorías y profesionales externos.",
       "Organización de información, documentación y seguimiento del proyecto.",
     ],
@@ -163,7 +163,7 @@ export const cvVariants: CvVariant[] = [
     nombreArchivo: "Sara-Echeverria-Ramos-CV-Gerencia-Direccion-Administrativa.pdf",
     titular: "Gerencia · Dirección Administrativa y Financiera",
     resumen:
-      "Cuento con más de veinte años de experiencia en gerencia, dirección administrativa y gestión integral de negocios propios. He asumido responsabilidad directa sobre administración, control económico, facturación, compras, gestión de proveedores, operaciones y coordinación de equipos de hasta 15 personas en tres establecimientos comerciales. Como socia al 50 %, administradora solidaria, gerente y responsable financiera de una empresa de construcción y promoción inmobiliaria, he participado en la dirección societaria, financiera y administrativa de un proyecto con un volumen aproximado de 1.000.000 €. Mi formación incluye la Diplomatura en Relaciones Laborales, el título de Técnico Superior en Administración y Finanzas y el Máster en Dirección de Recursos Humanos y Gestión de Personas, además de formación práctica en desarrollo web e inteligencia artificial aplicada a la gestión.",
+      "Cuento con más de veinte años de experiencia en gerencia, dirección administrativa y gestión integral de negocios propios. He asumido responsabilidad directa sobre administración, control económico, facturación, compras, gestión de proveedores, operaciones y coordinación de equipos de hasta 15 personas en tres establecimientos comerciales. Como socia al 50 %, administradora solidaria, gerente y responsable financiera de una empresa de construcción y promoción inmobiliaria, he participado en la dirección societaria, financiera y administrativa del proyecto. Mi formación incluye la Diplomatura en Relaciones Laborales, el título de Técnico Superior en Administración y Finanzas y el Máster en Dirección de Recursos Humanos y Gestión de Personas, además de formación práctica en desarrollo web e inteligencia artificial aplicada a la gestión.",
     ordenCompetencias: ["Dirección y gestión", "Visión empresarial", "Transformación digital", "Recursos Humanos y personas"],
     palabrasClave: ["Gerencia", "Dirección Administrativa", "Dirección financiera", "Gestión empresarial", "Dirección de Operaciones"],
     conFoto: true,
@@ -207,7 +207,7 @@ export const cvVariants: CvVariant[] = [
     ],
     aisaBullets: [
       "Participación directa en decisiones societarias, financieras y operativas.",
-      "Responsabilidad financiera y administrativa sobre un proyecto de construcción y promoción inmobiliaria con un volumen aproximado de 1.000.000 €.",
+      "Responsabilidad financiera y administrativa sobre un proyecto de construcción y promoción inmobiliaria.",
       "Control de presupuestos, facturación, ingresos y gastos.",
       "Gestión documental, contractual y administrativa de la sociedad y del proyecto.",
       "Coordinación con proveedores, asesorías y profesionales externos.",
