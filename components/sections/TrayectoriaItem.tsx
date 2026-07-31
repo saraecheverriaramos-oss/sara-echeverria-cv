@@ -33,7 +33,7 @@ export function TrayectoriaItem({ item, defaultOpen = false }: { item: Experienc
   const panelId = useId();
 
   return (
-    <li className="relative pb-10 last:pb-0">
+    <div className="relative pb-10 last:pb-0">
       <span
         aria-hidden
         className="absolute -left-[2.6rem] top-1.5 h-2.5 w-2.5 rounded-full border-2 border-accent bg-paper sm:-left-[3.1rem]"
@@ -96,6 +96,6 @@ export function TrayectoriaItem({ item, defaultOpen = false }: { item: Experienc
           ) : null}
         </div>
       </div>
-    </li>
+    </div>
   );
 }

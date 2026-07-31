@@ -35,8 +35,8 @@ export function Hero() {
           <div aria-hidden className="aurora-blob aurora-gold -left-32 -top-32 h-[26rem] w-[26rem]" />
           <div aria-hidden className="aurora-blob aurora-teal -bottom-40 left-1/3 h-[22rem] w-[22rem]" />
 
-          <p className="relative z-10 inline-flex w-fit items-center gap-2 rounded-full border border-noche-line bg-white/5 px-3 py-1 font-mono text-xs uppercase tracking-[0.2em] text-noche-ink-muted backdrop-blur">
-            <MapPin size={12} aria-hidden className="text-accent" />
+          <p className="relative z-10 inline-flex w-fit max-w-full items-center gap-2 rounded-full border border-noche-line bg-white/5 px-2.5 py-1 text-center font-mono text-[0.65rem] uppercase tracking-[0.12em] text-noche-ink-muted backdrop-blur sm:px-3 sm:text-xs sm:tracking-[0.2em]">
+            <MapPin size={12} aria-hidden className="shrink-0 text-accent" />
             {perfil.ubicacion}
           </p>
 
@@ -47,7 +47,7 @@ export function Hero() {
             </h1>
           </div>
 
-          <p className="relative z-10 line-clamp-3 max-w-lg text-lg leading-relaxed text-noche-ink-muted">
+          <p className="relative z-10 max-w-lg text-lg leading-relaxed text-noche-ink-muted">
             {perfil.propuestaValorBreve}
           </p>
 

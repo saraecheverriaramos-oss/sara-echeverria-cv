@@ -13,9 +13,11 @@ export function Trayectoria() {
     >
       <ol className="mt-14 space-y-0 border-l border-line pl-8 sm:pl-10">
         {perfil.experiencia.map((item, i) => (
-          <Reveal key={item.id} delay={i * 0.05}>
-            <TrayectoriaItem item={item} defaultOpen />
-          </Reveal>
+          <li key={item.id}>
+            <Reveal delay={i * 0.05}>
+              <TrayectoriaItem item={item} defaultOpen />
+            </Reveal>
+          </li>
         ))}
       </ol>
     </Section>

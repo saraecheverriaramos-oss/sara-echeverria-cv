@@ -1,6 +1,6 @@
 "use client";
 
-import { useEffect, useState } from "react";
+import { useEffect, useRef, useState } from "react";
 import { Menu, X } from "lucide-react";
 import { ThemeToggle } from "./ThemeToggle";
 import { Container } from "./ui/Container";
@@ -19,6 +19,21 @@ const links = [
 export function Navbar() {
   const [open, setOpen] = useState(false);
   const [active, setActive] = useState("inicio");
+  const menuButtonRef = useRef<HTMLButtonElement>(null);
+
+  useEffect(() => {
+    if (!open) return;
+
+    function handleKeyDown(e: KeyboardEvent) {
+      if (e.key === "Escape") {
+        setOpen(false);
+        menuButtonRef.current?.focus();
+      }
+    }
+
+    document.addEventListener("keydown", handleKeyDown);
+    return () => document.removeEventListener("keydown", handleKeyDown);
+  }, [open]);
 
   useEffect(() => {
     const sections = links
@@ -54,7 +69,7 @@ export function Navbar() {
               <a
                 key={link.href}
                 href={link.href}
-                aria-current={isActive ? "true" : undefined}
+                aria-current={isActive ? "location" : undefined}
                 className={cn(
                   "relative py-1 text-sm transition-colors",
                   isActive ? "text-ink" : "text-ink-muted hover:text-ink",
@@ -76,6 +91,7 @@ export function Navbar() {
         <div className="flex items-center gap-3">
           <ThemeToggle />
           <button
+            ref={menuButtonRef}
             type="button"
             className="flex h-9 w-9 items-center justify-center rounded-full border border-line lg:hidden"
             aria-label={open ? "Cerrar menú" : "Abrir menú"}

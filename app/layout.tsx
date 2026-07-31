@@ -28,23 +28,6 @@ export const metadata: Metadata = {
     template: `%s — ${perfil.nombre}`,
   },
   description: perfil.propuestaValorBreve,
-  keywords: [
-    "Sara Echeverría Ramos",
-    "Dirección de Recursos Humanos",
-    "Dirección de Personas",
-    "Gerencia",
-    "Dirección Administrativa",
-    "Gestión empresarial",
-    "Recursos Humanos Euskadi",
-    "Recursos Humanos Navarra",
-    "Oñati",
-    "Pamplona",
-    "Prevención de Riesgos Laborales",
-    "Inteligencia artificial aplicada a la empresa",
-    "Transformación digital",
-    "Selección y formación",
-    "Desarrollo organizativo",
-  ],
   authors: [{ name: perfil.nombre }],
   openGraph: {
     type: "profile",
@@ -53,11 +36,27 @@ export const metadata: Metadata = {
     siteName: `${perfil.nombre} — CV`,
     title: `${perfil.nombre} — ${perfil.titular}`,
     description: perfil.propuestaValorBreve,
+    images: [
+      {
+        url: `${siteUrl}/images/og-sara-echeverria.jpg`,
+        width: 1200,
+        height: 630,
+        alt: "Sara Echeverría Ramos — Dirección, Gerencia y Gestión de Personas",
+      },
+    ],
   },
   twitter: {
     card: "summary_large_image",
     title: `${perfil.nombre} — ${perfil.titular}`,
     description: perfil.propuestaValorBreve,
+    images: [
+      {
+        url: `${siteUrl}/images/og-sara-echeverria.jpg`,
+        width: 1200,
+        height: 630,
+        alt: "Sara Echeverría Ramos — Dirección, Gerencia y Gestión de Personas",
+      },
+    ],
   },
   robots: {
     index: true,
