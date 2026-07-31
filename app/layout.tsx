@@ -16,10 +16,13 @@ const inter = Inter({
   subsets: ["latin"],
 });
 
-const siteUrl = "https://sara-echeverria-cv.vercel.app";
+const siteUrl = "https://www.saraecheverria.es";
 
 export const metadata: Metadata = {
   metadataBase: new URL(siteUrl),
+  alternates: {
+    canonical: siteUrl,
+  },
   title: {
     default: `${perfil.nombre} — Dirección de Personas y Gestión Empresarial`,
     template: `%s — ${perfil.nombre}`,
