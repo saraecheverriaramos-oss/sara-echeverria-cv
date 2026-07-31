@@ -50,7 +50,7 @@ export const perfil: PerfilProfesional = {
     {
       titulo: "Personas y organización",
       descripcion:
-        "Formación en Dirección de Recursos Humanos y Gestión de Personas (ESIC Universidad) aplicada sobre experiencia real dirigiendo personas dentro de la gestión directa de negocios.",
+        "Experiencia empresarial en dirección, gestión integral y coordinación de personas dentro de negocios propios.",
     },
     {
       titulo: "Dirección y gestión empresarial",
@@ -236,6 +236,13 @@ export const perfil: PerfilProfesional = {
     "Herramientas de inteligencia artificial generativa",
   ],
 
+  herramientasCategorizadas: [
+    { categoria: "Gestión y productividad", items: ["Microsoft Excel", "Microsoft Word", "Google Workspace"] },
+    { categoria: "Diseño y comunicación", items: ["Canva"] },
+    { categoria: "Desarrollo y publicación web", items: ["GitHub", "Hostinger", "Vercel"] },
+    { categoria: "IA generativa", items: ["ChatGPT", "Claude"] },
+  ],
+
   formacion: [
     {
       id: "relaciones-laborales",
@@ -286,11 +293,12 @@ export const perfil: PerfilProfesional = {
 
   filosofia: {
     estado: "editorial_pendiente_aprobacion",
-    fraseGeneral: "Dirigir personas es una decisión de negocio, no solo una función de Recursos Humanos.",
+    fraseGeneral:
+      "He gestionado personas, clientes, proveedores y recursos económicos dentro del mismo negocio. Por eso entiendo la dirección de personas como parte de la estrategia empresarial.",
     ideas: [
-      "Las personas forman parte de la estrategia del negocio.",
-      "La gestión requiere criterio y ejecución.",
-      "La tecnología debe resolver problemas reales.",
+      "La gestión de personas debe estar conectada con los objetivos, la organización y la sostenibilidad del negocio.",
+      "El conocimiento laboral y preventivo aporta rigor a las decisiones empresariales y protege a las personas y a la organización.",
+      "La tecnología y la inteligencia artificial deben simplificar el trabajo y reforzar el criterio profesional, no sustituirlo.",
     ],
   },
 
@@ -325,8 +333,8 @@ export const perfil: PerfilProfesional = {
       nombreArchivo: "Sara-Echeverria-Ramos-CV-Visual.pdf",
     },
     ats: {
-      ruta: "/Sara-Echeverria-Ramos-CV-ATS.pdf",
-      nombreArchivo: "Sara-Echeverria-Ramos-CV-ATS.pdf",
+      ruta: "/Sara-Echeverria-Ramos-CV-General-Directivo-ATS.pdf",
+      nombreArchivo: "Sara-Echeverria-Ramos-CV-General-Directivo-ATS.pdf",
     },
   },
 };

@@ -7,7 +7,7 @@ const iconos = [Compass, Users, TrendingUp, Cpu];
 
 export function Competencias() {
   return (
-    <Section id="competencias" eyebrow="Competencias" title="Cuatro áreas, sin puntuaciones de autoevaluación">
+    <Section id="competencias" eyebrow="Competencias" title="Competencias desarrolladas en la gestión directa de negocios">
       <div className="mt-14 grid gap-6 sm:grid-cols-2">
         {perfil.competencias.map((grupo, i) => {
           const Icon = iconos[i % iconos.length];

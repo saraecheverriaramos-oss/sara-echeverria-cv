@@ -20,9 +20,14 @@ export function getCvContent(variantId: string = "general") {
     (a, b) => variant.ordenCompetencias.indexOf(a.area) - variant.ordenCompetencias.indexOf(b.area),
   );
 
+  const formacionAts = [...perfil.formacion]
+    .filter((f) => variant.formacionOrdenAts.includes(f.id))
+    .sort((a, b) => variant.formacionOrdenAts.indexOf(a.id) - variant.formacionOrdenAts.indexOf(b.id));
+
   return {
     nombre: perfil.nombre,
     titular: variant.titular,
+    subtitulo: variant.subtitulo,
     tagline: perfil.tagline,
     ubicacion: perfil.ubicacion,
     disponibilidad: perfil.disponibilidad,
@@ -30,12 +35,23 @@ export function getCvContent(variantId: string = "general") {
     resumenBreve: perfil.resumenBreve,
     contacto,
     competencias,
+    competenciasPrioritarias: variant.competenciasPrioritarias,
+    competenciasComplementarias: variant.competenciasComplementarias,
     herramientas: perfil.herramientas,
+    herramientasCategorizadas: perfil.herramientasCategorizadas,
     experiencia: perfil.experiencia,
     formacion: perfil.formacion,
+    formacionAts,
     proyectos: perfil.proyectos,
+    proyectosOverride: variant.proyectosOverride,
     idiomas: perfil.idiomas,
     nombreArchivo: variant.nombreArchivo,
+    conFoto: variant.conFoto,
+    bellotzaBullets: variant.bellotzaBullets,
+    aisaBullets: variant.aisaBullets,
+    etapaTitulo: variant.etapaTitulo,
+    etapaBullets: variant.etapaBullets,
+    bloqueEspecifico: variant.bloqueEspecifico,
     hitos: [
       { label: "+20 años", detalle: "dirigiendo negocios propios" },
       { label: "3 establecimientos", detalle: "gestión integral en Bellotza" },

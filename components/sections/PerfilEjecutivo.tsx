@@ -11,11 +11,10 @@ const hitos = [
 
 export function PerfilEjecutivo() {
   return (
-    <Section id="perfil" eyebrow="Perfil ejecutivo" title="Quién dirige, y desde dónde">
+    <Section id="perfil" eyebrow="Perfil ejecutivo" title="Dirección construida desde la experiencia empresarial">
       <div className="mt-8 max-w-2xl">
         <p className="text-lg leading-relaxed text-ink-muted">
-          Trayectoria construida desde la gestión real de negocios: dirección administrativa, financiera, comercial
-          y de personas, ejercida como empresaria — no aprendida solo en la teoría.
+          Trayectoria construida desde la dirección, la toma de decisiones y la gestión integral de negocios propios.
         </p>
       </div>
 

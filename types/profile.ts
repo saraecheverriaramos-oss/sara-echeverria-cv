@@ -86,6 +86,8 @@ export interface PerfilProfesional {
   };
   contacto: DatoContacto[];
   idiomas: Idioma[];
+  /** Herramientas agrupadas por categoría, para el listado "Herramientas" de los CV ejecutivos/ATS. */
+  herramientasCategorizadas: { categoria: string; items: string[] }[];
   cv: {
     archivoDisponible: boolean;
     visual: { ruta: string; nombreArchivo: string };
@@ -99,7 +101,29 @@ export interface CvVariant {
   etiqueta: string;
   nombreArchivo: string;
   titular: string;
+  /** Línea secundaria opcional bajo el titular (p. ej. "Administración · Personas · Operaciones · Transformación digital"). */
+  subtitulo?: string;
   resumen: string;
   ordenCompetencias: string[];
   palabrasClave: string[];
+  /** Si esta variante del PDF lleva fotografía en la cabecera. */
+  conFoto: boolean;
+  /** Viñetas de Bellotza reformuladas con el énfasis propio de esta variante (mismos hechos, distinta redacción). */
+  bellotzaBullets: string[];
+  /** Viñetas de Promociones AISA Cuatro reformuladas con el énfasis propio de esta variante. */
+  aisaBullets: string[];
+  /** Título profesional de la etapa 2024–actualidad, adaptado al enfoque de esta variante. */
+  etapaTitulo: string;
+  /** Viñetas de la etapa 2024–actualidad adaptadas al enfoque de esta variante. */
+  etapaBullets: string[];
+  /** Bloque breve de página 2 con información relevante específica de esta variante. */
+  bloqueEspecifico: { titulo: string; texto: string };
+  /** IDs de `formacion` a mostrar (y en qué orden) en los CV ejecutivos/ATS de esta variante. */
+  formacionOrdenAts: string[];
+  /** Competencias prioritarias curadas para el CV ejecutivo/ATS (página 1): 2 grupos, entre 10 y 12 conceptos en total. */
+  competenciasPrioritarias: GrupoCompetencias[];
+  /** Competencias complementarias curadas para el CV ejecutivo/ATS (página 2): entre 5 y 6 conceptos en total, sin duplicar las prioritarias. */
+  competenciasComplementarias: GrupoCompetencias[];
+  /** Descripciones de proyectos digitales (ART Motor Group / ATM Serges Group) específicas de esta variante, por id de proyecto. Si un id no está aquí, se usa la descripción por defecto de `data/profile.ts`. */
+  proyectosOverride: Record<string, string>;
 }

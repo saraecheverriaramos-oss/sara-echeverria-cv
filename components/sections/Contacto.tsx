@@ -94,7 +94,7 @@ export function Contacto() {
                     className="inline-flex items-center gap-2 rounded-full bg-gradient-to-r from-accent to-focus px-4 py-2 text-xs font-medium text-noche"
                   >
                     <Download size={13} aria-hidden />
-                    CV visual (principal)
+                    CV visual principal
                   </a>
                 ) : null}
                 {cvVariants.map((variant) => (

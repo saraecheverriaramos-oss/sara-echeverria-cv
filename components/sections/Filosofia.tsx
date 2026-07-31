@@ -4,7 +4,7 @@ import { Reveal } from "@/components/ui/Reveal";
 
 export function Filosofia() {
   return (
-    <Section id="filosofia" eyebrow="Filosofía de liderazgo" title="Cómo entiende la dirección de personas">
+    <Section id="filosofia" eyebrow="Filosofía de liderazgo" title="Personas y negocio: dos dimensiones de una misma dirección">
       <Reveal>
         <p className="mt-8 max-w-2xl font-serif text-2xl leading-snug text-ink sm:text-3xl">
           {perfil.filosofia.fraseGeneral}

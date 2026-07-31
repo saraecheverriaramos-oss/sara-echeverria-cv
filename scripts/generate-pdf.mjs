@@ -6,7 +6,7 @@ import { createElement } from "react";
 import path from "node:path";
 import { fileURLToPath } from "node:url";
 import { getCvContent } from "../lib/pdf/cv-content.ts";
-import { CvDocument } from "../lib/pdf/CvDocument.tsx";
+import { CvExecutiveDocument } from "../lib/pdf/CvExecutiveDocument.tsx";
 import { CvVisualDocument } from "../lib/pdf/CvVisualDocument.tsx";
 import { cvVariants } from "../data/cv-variants.ts";
 import { perfil } from "../data/profile.ts";
@@ -43,7 +43,7 @@ Font.register({
 for (const variant of cvVariants) {
   const cv = getCvContent(variant.id);
   const outputPath = path.join(publicDir, cv.nombreArchivo);
-  await renderToFile(createElement(CvDocument, { cv }), outputPath);
+  await renderToFile(createElement(CvExecutiveDocument, { cv }), outputPath);
   console.log(`PDF generado (${variant.etiqueta}): ${outputPath}`);
 }
 
