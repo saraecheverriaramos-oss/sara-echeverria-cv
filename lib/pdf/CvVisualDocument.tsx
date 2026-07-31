@@ -202,11 +202,18 @@ const styles = StyleSheet.create({
     left: 0,
     right: 0,
     backgroundColor: colors.paperMuted,
-    paddingVertical: 14,
+    paddingVertical: 12,
     paddingHorizontal: 40,
+  },
+  footerTopRow: {
     flexDirection: "row",
     justifyContent: "space-between",
     alignItems: "center",
+  },
+  footerDisponibilidad: {
+    marginTop: 4,
+    fontSize: 8,
+    color: colors.inkMuted,
   },
   footerText: {
     fontSize: 8.5,
@@ -282,10 +289,7 @@ function Header({ cv }: { cv: CvContent }) {
           <Text style={styles.name}>{cv.nombre}</Text>
           <Text style={styles.role}>Dirección de Personas y Gestión Empresarial</Text>
           <View style={styles.contactRow}>
-            <Text>{cv.ubicacion}</Text>
-            {cv.contacto.map((c) => (
-              <Text key={c.tipo}>{"   ·   " + c.valor}</Text>
-            ))}
+            <Text>{[cv.ubicacion, ...cv.contacto.map((c) => c.valor)].filter(Boolean).join("   ·   ")}</Text>
           </View>
           <Text style={styles.tagline}>{cv.tagline}</Text>
         </View>
@@ -340,7 +344,7 @@ export function CvVisualDocument({ cv }: { cv: CvContent }) {
       </Page>
 
       <Page size="A4" style={styles.page}>
-        <View style={[styles.body, { paddingTop: 34, paddingBottom: 70 }]}>
+        <View style={[styles.body, { paddingTop: 34, paddingBottom: 80 }]}>
           <Text style={styles.sectionLabel}>2024 — Actualidad</Text>
           <Text style={styles.sectionTitle}>Desarrollo digital, IA aplicada y especialización profesional</Text>
           <Text style={styles.paragraph}>{consultoria.contexto}</Text>
@@ -399,12 +403,11 @@ export function CvVisualDocument({ cv }: { cv: CvContent }) {
         </View>
 
         <View style={styles.footerBar}>
-          <Text style={styles.footerStrong}>{cv.nombre}</Text>
-          <Text style={styles.footerText}>
-            {cv.contacto.map((c) => c.valor).join("   ·   ")}
-            {"   ·   "}
-            {cv.ubicacion}
-          </Text>
+          <View style={styles.footerTopRow}>
+            <Text style={styles.footerStrong}>{cv.nombre}</Text>
+            <Text style={styles.footerText}>{cv.contacto.map((c) => c.valor).join("   ·   ")}</Text>
+          </View>
+          <Text style={styles.footerDisponibilidad}>{cv.disponibilidad}</Text>
         </View>
       </Page>
     </Document>

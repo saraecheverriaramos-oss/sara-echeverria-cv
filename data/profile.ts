@@ -34,7 +34,10 @@ export const perfil: PerfilProfesional = {
   propuestaValorBreve:
     "Más de dos décadas dirigiendo negocios propios — personas, finanzas, compras y clientes — combinadas con formación en Dirección de Recursos Humanos y Prevención de Riesgos Laborales, y aplicación práctica de inteligencia artificial a la gestión.",
 
-  ubicacion: "Oñati · Pamplona",
+  // Encabezado corto de disponibilidad geográfica (no un domicilio ni una
+  // limitación de búsqueda): se muestra junto al contacto en la web y en los
+  // PDF. La disponibilidad detallada va en `disponibilidad`.
+  ubicacion: "Disponibilidad geográfica amplia",
   disponibilidad: "Disponibilidad para proyectos en Euskadi, Navarra y otras ubicaciones según la posición",
 
   resumenEjecutivo:
@@ -292,7 +295,7 @@ export const perfil: PerfilProfesional = {
   },
 
   contacto: [
-    { tipo: "ubicacion", valor: "Oñati · Pamplona", etiqueta: "Ubicación profesional", disponible: true },
+    { tipo: "ubicacion", valor: null, etiqueta: "Ubicación profesional", disponible: false },
     {
       tipo: "email",
       valor: "saraecheverriaramos@gmail.com",
