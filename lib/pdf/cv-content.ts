@@ -22,15 +22,19 @@ export function getCvContent(variantId: string = "general") {
 
   const formacionAts = [...perfil.formacion]
     .filter((f) => variant.formacionOrdenAts.includes(f.id))
-    .sort((a, b) => variant.formacionOrdenAts.indexOf(a.id) - variant.formacionOrdenAts.indexOf(b.id));
+    .sort((a, b) => variant.formacionOrdenAts.indexOf(a.id) - variant.formacionOrdenAts.indexOf(b.id))
+    .map((f) => {
+      const overridePeriodo = variant.formacionPeriodoOverride?.[f.id];
+      return overridePeriodo !== undefined ? { ...f, periodo: overridePeriodo } : f;
+    });
 
   return {
     nombre: perfil.nombre,
     titular: variant.titular,
     subtitulo: variant.subtitulo,
     tagline: perfil.tagline,
-    ubicacion: perfil.ubicacion,
-    disponibilidad: perfil.disponibilidad,
+    ubicacion: variant.ubicacionOverride ?? perfil.ubicacion,
+    disponibilidad: variant.disponibilidadOverride ?? perfil.disponibilidad,
     resumen: variant.resumen,
     resumenBreve: perfil.resumenBreve,
     contacto,
@@ -60,7 +64,7 @@ export function getCvContent(variantId: string = "general") {
       { label: "+20 años", detalle: "dirigiendo negocios propios" },
       { label: "3 establecimientos", detalle: "gestión integral en Bellotza" },
       { label: "Experiencia societaria", detalle: "y financiera (Promociones AISA)" },
-      { label: "RR. HH. · PRL · IA", detalle: "formación aplicada a la gestión" },
+      { label: "RR. HH. · IA", detalle: "formación aplicada a la gestión" },
     ],
   };
 }

@@ -79,7 +79,6 @@ const personJsonLd = {
     "Dirección de Recursos Humanos",
     "Gestión empresarial",
     "Dirección administrativa",
-    "Prevención de Riesgos Laborales",
     "Transformación digital",
     "Inteligencia artificial aplicada",
   ],

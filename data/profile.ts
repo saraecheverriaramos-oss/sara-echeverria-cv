@@ -29,10 +29,10 @@ export const perfil: PerfilProfesional = {
   titular: "Dirección de Personas y Gestión Empresarial | Experiencia empresarial real, transformación digital e IA aplicada.",
 
   tagline:
-    "Más de 20 años dirigiendo negocios propios, con formación en Recursos Humanos, Prevención de Riesgos Laborales e inteligencia artificial aplicada a la gestión.",
+    "Más de 20 años dirigiendo negocios propios, con formación en Recursos Humanos e inteligencia artificial aplicada a la gestión.",
 
   propuestaValorBreve:
-    "Llevo más de dos décadas dirigiendo negocios propios — personas, finanzas, compras y clientes — combinadas con formación en Dirección de Recursos Humanos y Prevención de Riesgos Laborales, y aplicación práctica de inteligencia artificial a la gestión.",
+    "Llevo más de dos décadas dirigiendo negocios propios — personas, finanzas, compras y clientes — combinadas con formación en Dirección de Recursos Humanos y aplicación práctica de inteligencia artificial a la gestión.",
 
   // Encabezado corto de disponibilidad geográfica (no un domicilio ni una
   // limitación de búsqueda): se muestra junto al contacto en la web y en los
@@ -41,10 +41,10 @@ export const perfil: PerfilProfesional = {
   disponibilidad: "Disponibilidad para proyectos en Euskadi, Navarra y otras ubicaciones según la posición",
 
   resumenEjecutivo:
-    "He desarrollado más de veinte años de experiencia en dirección y gestión integral de negocios propios. Como fundadora, propietaria y gerente de Bellotza (2001–2023), dirigí tres establecimientos y coordiné equipos de hasta 15 personas. Posteriormente, como socia al 50 %, administradora solidaria, gerente y responsable financiera de Promociones AISA Cuatro S.L., participé en la dirección societaria, económica y administrativa de un proyecto de construcción y promoción inmobiliaria. Soy diplomada en Relaciones Laborales y he completado el Máster en Dirección de Recursos Humanos y Gestión de Personas; estoy matriculada en el Máster Universitario en Prevención de Riesgos Laborales para el curso 2026–2027. En paralelo desarrollo páginas web y aplico de forma práctica la inteligencia artificial a la gestión, la comunicación y la productividad.",
+    "He desarrollado más de veinte años de experiencia en dirección y gestión integral de negocios propios. Como fundadora, propietaria y gerente de Bellotza (2001–2023), dirigí tres establecimientos y coordiné equipos de hasta 15 personas. Posteriormente, como socia al 50 %, administradora solidaria, gerente y responsable financiera de Promociones AISA Cuatro S.L., participé en la dirección societaria, económica y administrativa de un proyecto de construcción y promoción inmobiliaria. Soy diplomada en Relaciones Laborales y he completado el Máster en Dirección de Recursos Humanos y Gestión de Personas. En paralelo desarrollo páginas web y aplico de forma práctica la inteligencia artificial a la gestión, la comunicación y la productividad.",
 
   resumenBreve:
-    "He desarrollado más de veinte años de experiencia en dirección y gestión integral de negocios propios. Como fundadora, propietaria y gerente de Bellotza (2001–2023), dirigí tres establecimientos y coordiné equipos de hasta 15 personas. Posteriormente, como socia al 50 %, administradora solidaria, gerente y responsable financiera de Promociones AISA Cuatro S.L., participé en la dirección societaria, económica y administrativa de un proyecto de construcción y promoción inmobiliaria. Soy diplomada en Relaciones Laborales y he completado el Máster en Dirección de Recursos Humanos y Gestión de Personas; estoy matriculada en el Máster Universitario en Prevención de Riesgos Laborales para el curso 2026–2027. Actualmente desarrollo páginas web y aplico inteligencia artificial a la gestión, la comunicación y la productividad.",
+    "He desarrollado más de veinte años de experiencia en dirección y gestión integral de negocios propios. Como fundadora, propietaria y gerente de Bellotza (2001–2023), dirigí tres establecimientos y coordiné equipos de hasta 15 personas. Posteriormente, como socia al 50 %, administradora solidaria, gerente y responsable financiera de Promociones AISA Cuatro S.L., participé en la dirección societaria, económica y administrativa de un proyecto de construcción y promoción inmobiliaria. Soy diplomada en Relaciones Laborales y he completado el Máster en Dirección de Recursos Humanos y Gestión de Personas. Actualmente desarrollo páginas web y aplico inteligencia artificial a la gestión, la comunicación y la productividad.",
 
   pilares: [
     {
@@ -68,9 +68,8 @@ export const perfil: PerfilProfesional = {
         "Desarrollo de páginas web y aplicación práctica de inteligencia artificial en proyectos como ART Motor Group y ATM Serges Group.",
     },
     {
-      titulo: "Prevención, formación y desarrollo",
-      descripcion:
-        "Matriculada en el Máster Universitario en Prevención de Riesgos Laborales para el curso 2026–2027, y habilitación docente en Formación Profesional en curso.",
+      titulo: "Formación docente",
+      descripcion: "Formación para la habilitación docente en Grados A, B y C del Sistema de Formación Profesional, en curso.",
     },
   ],
 
@@ -86,7 +85,6 @@ export const perfil: PerfilProfesional = {
         "Formación especializada y desarrollo de proyectos digitales con los que amplío y actualizo una trayectoria empresarial consolidada.",
       responsabilidades: [
         "Finalización del Máster en Dirección de Recursos Humanos y Gestión de Personas en ESIC Universidad.",
-        "Matriculación en el Máster Universitario en Prevención de Riesgos Laborales de la UPNA para el curso 2026–2027.",
         "Formación para la Habilitación de Docencia en Grados A, B y C del Sistema de Formación Profesional.",
         "Desarrollo y gestión de páginas web y contenidos digitales para proyectos empresariales.",
         "Aplicación de inteligencia artificial generativa a documentación, comunicación, organización y productividad.",
@@ -389,15 +387,6 @@ export const perfil: PerfilProfesional = {
       estado: "completada",
     },
     {
-      id: "master-prl-upna",
-      titulo: "Máster Universitario en Prevención de Riesgos Laborales",
-      institucion: "Universidad Pública de Navarra (UPNA)",
-      periodo: "2026–2027",
-      estado: "matriculada",
-      detalle:
-        "Especialidades del programa: Seguridad en el Trabajo, Higiene Industrial y Ergonomía y Psicosociología Aplicada.",
-    },
-    {
       id: "habilitacion-docente-fp",
       titulo: "Habilitación para la Docencia en Grados A, B y C del Sistema de Formación Profesional",
       institucion: null,
@@ -426,8 +415,7 @@ export const perfil: PerfilProfesional = {
       },
       {
         titulo: "Actualización intensiva",
-        texto:
-          "Formación de posgrado, prevención, docencia, herramientas digitales, desarrollo web e inteligencia artificial aplicada.",
+        texto: "Formación de posgrado, docencia, herramientas digitales, desarrollo web e inteligencia artificial aplicada.",
       },
       {
         titulo: "Nueva aportación",
@@ -445,7 +433,7 @@ export const perfil: PerfilProfesional = {
       "He gestionado personas, clientes, proveedores y recursos económicos dentro del mismo negocio. Por eso entiendo la dirección de personas como parte de la estrategia empresarial.",
     ideas: [
       "La gestión de personas debe estar conectada con los objetivos, la organización y la sostenibilidad del negocio.",
-      "El conocimiento laboral y preventivo aporta rigor a las decisiones empresariales y protege a las personas y a la organización.",
+      "El conocimiento laboral aporta rigor a las decisiones empresariales y protege a las personas y a la organización.",
       "La tecnología y la inteligencia artificial deben simplificar el trabajo y reforzar el criterio profesional, no sustituirlo.",
     ],
   },

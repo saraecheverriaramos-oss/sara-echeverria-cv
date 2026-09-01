@@ -6,7 +6,7 @@ const hitos = [
   { icon: Users, label: "+20 años", detalle: "dirigiendo negocios propios" },
   { icon: Building2, label: "3 establecimientos", detalle: "gestión integral en Bellotza" },
   { icon: Landmark, label: "Experiencia societaria", detalle: "y financiera (Promociones AISA)" },
-  { icon: GraduationCap, label: "RR. HH. · PRL · IA", detalle: "formación aplicada a la gestión" },
+  { icon: GraduationCap, label: "RR. HH. · IA", detalle: "formación aplicada a la gestión" },
 ];
 
 export function PerfilEjecutivo() {

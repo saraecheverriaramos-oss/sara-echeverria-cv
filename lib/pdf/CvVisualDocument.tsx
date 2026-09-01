@@ -316,7 +316,6 @@ const TRANSICION_BULLETS = [
 const FORMACION_PROYECTOS_BULLETS = [
   "Máster en Dirección de Recursos Humanos y Gestión de Personas — ESIC Universidad · 2025–2026 · Finalizado.",
   "Aplicación de inteligencia artificial generativa a documentación, comunicación, organización y productividad.",
-  "Máster Universitario en Prevención de Riesgos Laborales — UPNA · Curso 2026–2027 · Matriculada.",
 ];
 
 export function CvVisualDocument({ cv }: { cv: CvContent }) {

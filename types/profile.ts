@@ -125,6 +125,10 @@ export interface CvVariant {
   titular: string;
   /** Línea secundaria opcional bajo el titular (p. ej. "Administración · Personas · Operaciones · Transformación digital"). */
   subtitulo?: string;
+  /** Sustituye `perfil.ubicacion` solo para esta variante, sin afectar a la web ni a las demás variantes. */
+  ubicacionOverride?: string;
+  /** Sustituye `perfil.disponibilidad` (texto del pie de la página 2 del PDF ejecutivo) solo para esta variante. */
+  disponibilidadOverride?: string;
   resumen: string;
   ordenCompetencias: string[];
   palabrasClave: string[];
@@ -148,6 +152,12 @@ export interface CvVariant {
   notaSecundaria?: string;
   /** IDs de `formacion` a mostrar (y en qué orden) en los CV ejecutivos/ATS de esta variante. */
   formacionOrdenAts: string[];
+  /**
+   * Sustituye el `periodo` de una entrada concreta de `formacion` solo para esta
+   * variante (por id). Usar `""` para ocultar el periodo manteniendo el estado
+   * ("Finalizado."/"Matriculada."/"En curso."); usar `null` para ocultar también el estado.
+   */
+  formacionPeriodoOverride?: Record<string, string | null>;
   /** Competencias prioritarias curadas para el CV ejecutivo/ATS (página 1): 2 grupos, entre 10 y 12 conceptos en total. */
   competenciasPrioritarias: GrupoCompetencias[];
   /** Competencias complementarias curadas para el CV ejecutivo/ATS (página 2): entre 5 y 6 conceptos en total, sin duplicar las prioritarias. */

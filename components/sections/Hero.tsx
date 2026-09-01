@@ -3,13 +3,7 @@ import { ArrowRight, Download, MapPin } from "lucide-react";
 import { perfil } from "@/data/profile";
 import { HeroMarquee } from "./HeroMarquee";
 
-const rolesClave = [
-  "Dirección de Personas",
-  "Gestión Empresarial",
-  "Prevención de Riesgos Laborales",
-  "Transformación Digital",
-  "Inteligencia Artificial Aplicada",
-];
+const rolesClave = ["Dirección de Personas", "Gestión Empresarial", "Transformación Digital", "Inteligencia Artificial Aplicada"];
 
 export function Hero() {
   return (

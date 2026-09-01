@@ -106,7 +106,7 @@ const styles = StyleSheet.create({
   },
   body: {
     paddingHorizontal: 40,
-    paddingTop: 18,
+    paddingTop: 14,
   },
   sectionLabel: {
     fontFamily: "Inter",
@@ -115,7 +115,7 @@ const styles = StyleSheet.create({
     letterSpacing: 0.5,
     textTransform: "uppercase",
     color: colors.focus,
-    marginBottom: 7,
+    marginBottom: 6,
   },
   sectionLabelMuted: {
     fontFamily: "Inter",
@@ -135,7 +135,7 @@ const styles = StyleSheet.create({
     fontSize: 9.7,
     color: colors.inkMuted,
     lineHeight: 1.5,
-    marginBottom: 4,
+    marginBottom: 3,
   },
   competArea: {
     fontFamily: "Inter",
@@ -143,7 +143,7 @@ const styles = StyleSheet.create({
     color: colors.accent,
   },
   expBlock: {
-    marginTop: 14,
+    marginTop: 11,
   },
   expHeaderRow: {
     flexDirection: "row",
@@ -172,11 +172,11 @@ const styles = StyleSheet.create({
     fontSize: 8.3,
     color: colors.inkMuted,
     marginTop: 1,
-    marginBottom: 7,
+    marginBottom: 5,
   },
   bulletRow: {
     flexDirection: "row",
-    marginBottom: 3,
+    marginBottom: 2,
     paddingRight: 4,
   },
   bulletMark: {
@@ -294,7 +294,7 @@ const styles = StyleSheet.create({
 function estadoLabel(item: FormacionItem): string {
   if (item.estado === "matriculada") return " · Matriculada.";
   if (item.estado === "en_curso") return " · En curso.";
-  if (item.estado === "completada" && item.periodo) return " · Finalizado.";
+  if (item.estado === "completada" && item.periodo !== null) return " · Finalizado.";
   return "";
 }
 
@@ -310,9 +310,9 @@ function FormacionLine({ item }: { item: FormacionItem }) {
 }
 
 function Header({ cv }: { cv: CvContent }) {
-  const contactoTexto = ["Disponibilidad geográfica amplia", ...cv.contacto.map((c) => c.valor)]
+  const contactoTexto = [cv.ubicacion, ...cv.contacto.map((c) => c.valor)]
     .filter(Boolean)
-    .join("   ·   ");
+    .join("   ·   ");
 
   return (
     <>
@@ -374,15 +374,17 @@ export function CvExecutiveDocument({ cv }: { cv: CvContent }) {
             ))}
           </View>
 
-          <View style={styles.expBlock} wrap={false}>
-            <View style={styles.expHeaderRow}>
-              <Text style={styles.expEmpresa}>{bellotza.empresa}</Text>
-              <Text style={styles.expPeriodo}>{bellotza.periodo}</Text>
+          <View style={styles.expBlock}>
+            <View wrap={false}>
+              <View style={styles.expHeaderRow}>
+                <Text style={styles.expEmpresa}>{bellotza.empresa}</Text>
+                <Text style={styles.expPeriodo}>{bellotza.periodo}</Text>
+              </View>
+              <Text style={styles.expRole}>{BELLOTZA_PUESTO_ATS}</Text>
+              <Text style={styles.expMeta}>{[bellotza.ubicacion, bellotza.sector].filter(Boolean).join(" · ")}</Text>
             </View>
-            <Text style={styles.expRole}>{BELLOTZA_PUESTO_ATS}</Text>
-            <Text style={styles.expMeta}>{[bellotza.ubicacion, bellotza.sector].filter(Boolean).join(" · ")}</Text>
             {cv.bellotzaBullets.map((r) => (
-              <View key={r} style={styles.bulletRow}>
+              <View key={r} style={styles.bulletRow} wrap={false}>
                 <Text style={styles.bulletMark}>—</Text>
                 <Text style={styles.bulletText}>{r}</Text>
               </View>
